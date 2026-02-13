@@ -4,7 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, Mail, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../../../public/logo.png';
 
 export default function Header() {
@@ -70,50 +71,97 @@ export default function Header() {
                 </div>
             </header>
 
-            {/* Mobile Navigation Overlay - Outside Header */}
-            <div className={`fixed inset-0 bg-white z-[100] flex flex-col transition-transform duration-300 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                {/* Close Button Row - Aligned with Header */}
-                <div className="container mx-auto px-4 h-20 flex justify-end items-center shrink-0">
-                    <button
-                        className="h-20 flex items-center text-black"
-                        onClick={toggleMenu}
-                        aria-label="Close menu"
+            {/* Mobile Navigation Overlay - Premium Dark Theme */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, x: '100%' }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: '100%' }}
+                        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                        className="fixed inset-0 bg-zinc-950/95 backdrop-blur-xl z-[100] flex flex-col md:hidden"
                     >
-                        <X size={28} />
-                    </button>
-                </div>
+                        {/* Header Row: Logo & Close Button */}
+                        <div className="container mx-auto px-4 h-24 flex justify-between items-center shrink-0 border-b border-white/10">
+                            {/* Logo in Menu */}
+                            <div className="relative h-16 w-32" onClick={toggleMenu}>
+                                <Image
+                                    src={logoImg}
+                                    alt="New Path Logistics"
+                                    fill
+                                    className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2]"
+                                />
+                            </div>
 
-                {/* Menu Items */}
-                <nav className="flex-1 flex flex-col justify-center items-center -mt-20">
-                    <ul className="flex flex-col items-center space-y-8 text-2xl font-bold uppercase tracking-widest">
-                        <li>
-                            <Link href="/" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-black">
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/services" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-zinc-800">
-                                Services
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/about" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-zinc-800">
-                                About Us
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/careers" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-zinc-800">
-                                Careers
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/contact" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-zinc-800">
-                                Contact
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                            <button
+                                className="h-12 w-12 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors text-white"
+                                onClick={toggleMenu}
+                                aria-label="Close menu"
+                            >
+                                <X size={28} />
+                            </button>
+                        </div>
+
+                        {/* Menu Items */}
+                        <nav className="flex-1 flex flex-col justify-center items-center py-8">
+                            <ul className="flex flex-col items-center space-y-8 text-3xl font-bold uppercase tracking-widest w-full">
+                                {['Home', 'Services', 'About', 'Careers', 'Contact'].map((item, index) => (
+                                    <motion.li
+                                        key={item}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.1 + index * 0.1 }}
+                                    >
+                                        <Link
+                                            href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
+                                            onClick={toggleMenu}
+                                            className="text-white hover:text-red-500 transition-colors"
+                                        >
+                                            {item}
+                                        </Link>
+                                    </motion.li>
+                                ))}
+                            </ul>
+
+                            {/* CTA Button */}
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.5 }}
+                                className="mt-12 w-full max-w-xs px-6"
+                            >
+                                <Link
+                                    href="/contact"
+                                    onClick={toggleMenu}
+                                    className="block w-full py-4 text-center bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider rounded-lg transition-colors shadow-lg shadow-red-900/20"
+                                >
+                                    Get a Quote
+                                </Link>
+                            </motion.div>
+                        </nav>
+
+                        {/* Footer: Contacts */}
+                        <div className="pb-8 px-6 text-center border-t border-white/10 pt-6">
+                            <div className="flex flex-col space-y-4 text-zinc-400 text-sm">
+                                <a href="tel:+15551234567" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
+                                    <Phone size={18} />
+                                    <span>+1 (555) 123-4567</span>
+                                </a>
+                                <a href="mailto:info@newpathlogistics.com" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
+                                    <Mail size={18} />
+                                    <span>info@newpathlogistics.com</span>
+                                </a>
+                            </div>
+
+                            <div className="flex justify-center space-x-6 mt-6 text-zinc-500">
+                                <a href="#" className="hover:text-white transition-colors"><Facebook size={24} /></a>
+                                <a href="#" className="hover:text-white transition-colors"><Linkedin size={24} /></a>
+                                <a href="#" className="hover:text-white transition-colors"><Instagram size={24} /></a>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     );
 }
