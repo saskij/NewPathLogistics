@@ -7,7 +7,7 @@ export default function Header() {
         <header className="fixed w-full top-0 z-50 bg-anthracite/90 backdrop-blur-sm border-b border-white/10">
             <div className="container mx-auto px-4 h-28 flex justify-between items-center">
                 <Link href="/" className="flex items-center gap-2 relative z-50">
-                    <div className="relative h-48 w-[500px] -ml-8 -mt-2">
+                    <div className="relative h-48 w-[500px] -ml-8 mt-16">
                         <Image
                             src={logoImg}
                             alt="New Path Logistics Logo"
