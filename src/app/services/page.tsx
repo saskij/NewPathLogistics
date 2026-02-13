@@ -2,7 +2,7 @@
 import { Map, Package, Route, ArrowRight, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import heroNew from "../../../public/hero-new.jpg";
-import driverFleet from "../../../public/driver-fleet.jpg";
+import joinFleet from "../../../public/Join our fleet.jpg";
 import Link from "next/link";
 
 export default function ServicesPage() {
@@ -68,10 +68,10 @@ export default function ServicesPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="order-1 relative h-[400px] w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
                             <Image
-                                src={driverFleet}
+                                src={joinFleet}
                                 alt="Freight Solutions"
                                 fill
-                                className="object-cover hover:scale-105 transition-transform duration-700"
+                                className="object-cover brightness-[0.7] contrast-[1.1] hover:scale-105 transition-transform duration-700"
                             />
                         </div>
                         <div className="order-2">
