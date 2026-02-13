@@ -60,7 +60,7 @@ export default function Header() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-white relative z-50 h-20 flex items-center"
+                    className={`md:hidden relative z-50 h-20 flex items-center transition-colors duration-300 ${isMenuOpen ? 'text-black' : 'text-white'}`}
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
@@ -68,31 +68,31 @@ export default function Header() {
                 </button>
 
                 {/* Mobile Navigation Overlay */}
-                <div className={`fixed inset-0 bg-[#121212] z-40 flex flex-col justify-center items-center transition-transform duration-300 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`fixed inset-0 bg-white z-40 flex flex-col justify-center items-center transition-transform duration-300 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <nav>
                         <ul className="flex flex-col items-center space-y-8 text-2xl font-bold uppercase tracking-widest">
                             <li>
-                                <Link href="/" onClick={toggleMenu} className="hover:text-red-500 transition-colors text-white">
+                                <Link href="/" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-black">
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services" onClick={toggleMenu} className="hover:text-red-500 transition-colors text-gray-300">
+                                <Link href="/services" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-zinc-800">
                                     Services
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" onClick={toggleMenu} className="hover:text-red-500 transition-colors text-gray-300">
+                                <Link href="/about" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-zinc-800">
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/careers" onClick={toggleMenu} className="hover:text-red-500 transition-colors text-gray-300">
+                                <Link href="/careers" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-zinc-800">
                                     Careers
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" onClick={toggleMenu} className="hover:text-red-500 transition-colors text-gray-300">
+                                <Link href="/contact" onClick={toggleMenu} className="hover:text-red-600 transition-colors text-zinc-800">
                                     Contact
                                 </Link>
                             </li>
