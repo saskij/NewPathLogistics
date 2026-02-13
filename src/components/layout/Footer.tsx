@@ -45,8 +45,8 @@ export default function Footer() {
                                         <MapPin className="w-5 h-5 text-red-600 mt-1" />
                                         <div>
                                             <p className="text-base text-zinc-300 leading-relaxed">
-                                                123 Logistics Way<br />
-                                                Denver, CO 80202
+                                                Based in Meridian, Idaho<br />
+                                                Serving All 48 States
                                             </p>
                                         </div>
                                     </li>

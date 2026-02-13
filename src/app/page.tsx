@@ -31,7 +31,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-start pt-48 pb-20">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter mb-8 max-w-5xl leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-sans">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-[0.05em] mb-8 max-w-5xl leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-sans">
             Nationwide<br />
             <span className="text-zinc-200">Trucking</span>
           </h1>

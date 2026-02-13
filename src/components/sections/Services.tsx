@@ -35,7 +35,8 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="py-24 bg-white text-zinc-900">
+    return (
+        <section className="py-24 bg-zinc-50 text-zinc-900">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-zinc-900 mb-4">Our Services</h2>
@@ -57,7 +58,7 @@ export default function Services() {
                                 <p className="text-zinc-600 mb-8 flex-grow leading-relaxed">
                                     {service.description}
                                 </p>
-                                <button className="px-6 py-2 border border-zinc-300 text-zinc-900 text-sm font-bold uppercase tracking-wider rounded hover:bg-zinc-900 hover:text-white transition-all duration-300">
+                                <button className="h-12 px-8 border border-zinc-300 text-zinc-900 text-sm font-bold uppercase tracking-wider rounded hover:bg-zinc-900 hover:text-white transition-all duration-300 flex items-center justify-center">
                                     Learn More
                                 </button>
                             </div>

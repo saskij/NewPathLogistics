@@ -2,7 +2,7 @@ import { Send } from "lucide-react";
 
 export default function AboutContact() {
     return (
-        <section className="py-32 bg-white text-zinc-900 relative overflow-hidden">
+        <section className="py-32 bg-zinc-50 text-zinc-900 relative overflow-hidden">
             {/* Mountain SVG Background - Silhouette */}
             <div className="absolute bottom-0 left-0 w-full leading-none z-0 text-zinc-100">
                 <svg className="w-full h-auto" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,11 +35,16 @@ export default function AboutContact() {
                                 <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">A Partnership</strong>
                                 We view our drivers and clients as partners. When you drive for New Path, you're not just a number; you're the backbone of our operation. We invest in top‐tier equipment and support systems to ensure you succeed on the road.
                             </p>
+
+                            <div className="pt-8 mt-8 border-t border-zinc-200">
+                                <p className="text-sm font-bold uppercase tracking-widest text-zinc-500">Headquarters</p>
+                                <p className="text-xl text-zinc-900 font-bold mt-2">Proudly based in Meridian, Idaho.</p>
+                            </div>
                         </div>
                     </div>
 
                     {/* Form Side */}
-                    <div className="bg-zinc-950 p-8 md:p-12 shadow-2xl border border-zinc-900 rounded-none">
+                    <div className="bg-zinc-950 p-8 md:p-12 shadow-2xl border border-zinc-900 rounded-none relative">
                         <h3 className="text-3xl font-bold mb-2 uppercase tracking-wide text-white">Get a Quote</h3>
                         <p className="text-zinc-400 mb-8">Start your partnership with us today.</p>
 
@@ -49,7 +54,7 @@ export default function AboutContact() {
                                 <input
                                     type="text"
                                     id="name"
-                                    className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors rounded-none"
+                                    className="w-full h-12 bg-[#1A1A1A] border border-zinc-700 px-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors rounded-none"
                                     placeholder="YOUR NAME"
                                 />
                             </div>
@@ -59,7 +64,7 @@ export default function AboutContact() {
                                 <input
                                     type="email"
                                     id="email"
-                                    className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors rounded-none"
+                                    className="w-full h-12 bg-[#1A1A1A] border border-zinc-700 px-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors rounded-none"
                                     placeholder="YOUR EMAIL"
                                 />
                             </div>
@@ -76,7 +81,7 @@ export default function AboutContact() {
 
                             <button
                                 type="submit"
-                                className="w-full bg-white text-black font-black uppercase tracking-widest py-5 hover:bg-gray-200 transition-all duration-300 text-lg flex items-center justify-center gap-2 mt-4 rounded-none"
+                                className="w-full h-14 bg-white text-black font-black uppercase tracking-widest hover:bg-gray-200 transition-all duration-300 text-lg flex items-center justify-center gap-2 mt-4 rounded-none"
                             >
                                 Submit
                             </button>

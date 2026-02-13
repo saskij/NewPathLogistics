@@ -25,7 +25,7 @@ const reasons = [
 
 export default function WhyDrive() {
     return (
-        <section className="py-24 bg-white text-anthracite">
+        <section className="py-24 bg-zinc-50 text-anthracite">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight mb-4">Real Drivers. Real Opportunities.</h2>
