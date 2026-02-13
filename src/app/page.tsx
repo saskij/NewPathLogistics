@@ -13,7 +13,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-bg.jpg"
+            src="/hero-new.jpg"
             alt="New Path Logistics Truck on Highway"
             fill
             className="object-cover object-center"
