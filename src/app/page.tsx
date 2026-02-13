@@ -25,14 +25,15 @@ export default function Home() {
           />
           {/* Overlay */}
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black opacity-90" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 opacity-100" />
         </div>
 
         {/* Content */}
-        <div className="container mx-auto px-4 relative z-10 flex flex-col items-start pt-32 pb-12">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter mb-8 max-w-6xl leading-[0.85] text-white drop-shadow-2xl">
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-start pt-48 pb-20">
+          <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-black uppercase tracking-tighter mb-8 max-w-6xl leading-[0.8] text-white drop-shadow-2xl font-sans">
             Nationwide<br />
-            <span className="text-gray-200">Trucking</span>
+            <span className="text-zinc-300">Trucking</span>
           </h1>
 
           <div className="max-w-2xl mb-12 pl-1 border-l-8 border-white">

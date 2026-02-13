@@ -35,9 +35,9 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="py-24 bg-[#1A1A1A]">
+        <section className="py-32 bg-[#1A1A1A]">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
+                <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-white mb-4">Our Services</h2>
                     <div className="w-24 h-1 bg-white mx-auto"></div>
                 </div>
@@ -48,7 +48,7 @@ export default function Services() {
                         return (
                             <div
                                 key={index}
-                                className="group p-8 bg-[#1A1A1A] border border-zinc-800 rounded-lg hover:border-white transition-all duration-300 flex flex-col items-start"
+                                className="group p-10 bg-zinc-900 border border-zinc-800 rounded-sm hover:border-white transition-all duration-300 flex flex-col items-start"
                             >
                                 <div className="mb-6 p-3 bg-white/5 rounded-lg group-hover:bg-white/10 transition-colors">
                                     <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />

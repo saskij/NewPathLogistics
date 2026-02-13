@@ -2,12 +2,13 @@ import { Send } from "lucide-react";
 
 export default function AboutContact() {
     return (
-        <section className="py-24 bg-anthracite text-white relative overflow-hidden">
-            {/* Mountain SVG Background */}
-            <div className="absolute bottom-0 left-0 w-full leading-none z-0 text-white/5">
-                <svg className="w-full h-auto" viewBox="0 0 1440 320" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fillOpacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                    <path fillOpacity="0.5" d="M0,256L48,250.7C96,245,192,235,288,213.3C384,192,480,160,576,149.3C672,139,768,149,864,170.7C960,192,1056,224,1152,234.7C1248,245,1344,235,1392,229.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        <section className="py-32 bg-anthracite text-white relative overflow-hidden">
+            {/* Mountain SVG Background - Silhouette */}
+            <div className="absolute bottom-0 left-0 w-full leading-none z-0 text-black">
+                <svg className="w-full h-auto" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25" fill="#000"></path>
+                    <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5" fill="#000"></path>
+                    <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" fill="#000"></path>
                 </svg>
             </div>
 
@@ -38,7 +39,7 @@ export default function AboutContact() {
                     </div>
 
                     {/* Form Side */}
-                    <div className="bg-black p-8 md:p-12 shadow-2xl border border-zinc-800">
+                    <div className="bg-black p-8 md:p-12 shadow-2xl border border-zinc-800 rounded-none">
                         <h3 className="text-3xl font-bold mb-2 uppercase tracking-wide text-white">Get a Quote</h3>
                         <p className="text-gray-500 mb-8">Start your partnership with us today.</p>
 
@@ -48,7 +49,7 @@ export default function AboutContact() {
                                 <input
                                     type="text"
                                     id="name"
-                                    className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
+                                    className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors rounded-none"
                                     placeholder="YOUR NAME"
                                 />
                             </div>
@@ -58,7 +59,7 @@ export default function AboutContact() {
                                 <input
                                     type="email"
                                     id="email"
-                                    className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
+                                    className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors rounded-none"
                                     placeholder="YOUR EMAIL"
                                 />
                             </div>
@@ -68,14 +69,14 @@ export default function AboutContact() {
                                 <textarea
                                     id="message"
                                     rows={4}
-                                    className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors resize-none"
+                                    className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors resize-none rounded-none"
                                     placeholder="HOW CAN WE HELP YOU?"
                                 ></textarea>
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full bg-white text-black font-black uppercase tracking-widest py-5 hover:bg-gray-200 transition-all duration-300 text-lg flex items-center justify-center gap-2 mt-4"
+                                className="w-full bg-white text-black font-black uppercase tracking-widest py-5 hover:bg-gray-200 transition-all duration-300 text-lg flex items-center justify-center gap-2 mt-4 rounded-none"
                             >
                                 Submit
                             </button>

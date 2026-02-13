@@ -55,7 +55,7 @@ export default function Careers() {
                         src={driverFleet}
                         alt="Professional New Path Logistics Driver"
                         fill
-                        className="object-cover"
+                        className="object-cover brightness-[0.7] contrast-[1.1]"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-anthracite/10 mix-blend-multiply transition-opacity hover:opacity-0 duration-500"></div>
