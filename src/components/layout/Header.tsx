@@ -60,7 +60,7 @@ export default function Header() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className={`md:hidden relative z-50 h-20 flex items-center transition-colors duration-300 ${isMenuOpen ? 'text-black' : 'text-white'}`}
+                    className={`md:hidden relative z-[70] h-20 flex items-center transition-colors duration-300 ${isMenuOpen ? 'text-black' : 'text-white'}`}
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
@@ -68,7 +68,7 @@ export default function Header() {
                 </button>
 
                 {/* Mobile Navigation Overlay */}
-                <div className={`fixed inset-0 bg-white z-40 flex flex-col justify-center items-center transition-transform duration-300 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`fixed inset-0 bg-white z-[60] flex flex-col justify-center items-center transition-transform duration-300 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <nav>
                         <ul className="flex flex-col items-center space-y-8 text-2xl font-bold uppercase tracking-widest">
                             <li>
