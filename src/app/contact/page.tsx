@@ -5,7 +5,7 @@ import heroNew from "../../../public/hero-new.jpg";
 
 export default function ContactPage() {
     return (
-        <div className="bg-anthracite text-white min-h-screen">
+        <div className="bg-zinc-50 text-zinc-900 min-h-screen">
 
             {/* Hero / Header */}
             <section className="relative py-24 border-b border-zinc-800 bg-black overflow-hidden">
@@ -51,54 +51,54 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
             </section>
 
             {/* Main Content Area */}
-            <section className="py-20">
+            <section className="py-20 bg-zinc-50">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
                         {/* Contact Info Side */}
                         <div>
-                            <h2 className="text-3xl font-bold uppercase tracking-wide mb-8">Get In Touch</h2>
-                            <p className="text-xl text-gray-300 font-light leading-relaxed mb-12">
+                            <h2 className="text-3xl font-bold uppercase tracking-wide mb-8 text-zinc-900">Get In Touch</h2>
+                            <p className="text-xl text-zinc-600 font-light leading-relaxed mb-12">
                                 Whether you're a shipper looking for reliable capacity or a driver seeking a better career, we're here to answer your questions.
                             </p>
 
                             <div className="space-y-10">
                                 {/* Phone */}
                                 <div className="flex items-start gap-6 group">
-                                    <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-xl group-hover:border-white transition-colors duration-300">
-                                        <Phone className="w-8 h-8 text-white" />
+                                    <div className="p-4 bg-zinc-100 rounded-xl group-hover:bg-zinc-200 transition-colors duration-300">
+                                        <Phone className="w-8 h-8 text-zinc-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-gray-400">Phone</h3>
-                                        <a href="tel:5551234567" className="text-2xl font-bold text-white hover:text-gray-300 transition-colors">
+                                        <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-zinc-500">Phone</h3>
+                                        <a href="tel:5551234567" className="text-2xl font-bold text-zinc-900 hover:text-zinc-600 transition-colors">
                                             (555) 123-4567
                                         </a>
-                                        <p className="text-sm text-gray-500 mt-1">Mon-Fri, 8am - 6pm MST</p>
+                                        <p className="text-sm text-zinc-500 mt-1">Mon-Fri, 8am - 6pm MST</p>
                                     </div>
                                 </div>
 
                                 {/* Email */}
                                 <div className="flex items-start gap-6 group">
-                                    <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-xl group-hover:border-white transition-colors duration-300">
-                                        <Mail className="w-8 h-8 text-white" />
+                                    <div className="p-4 bg-zinc-100 rounded-xl group-hover:bg-zinc-200 transition-colors duration-300">
+                                        <Mail className="w-8 h-8 text-zinc-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-gray-400">Email</h3>
-                                        <a href="mailto:info@newpathlogistics.com" className="text-2xl font-bold text-white hover:text-gray-300 transition-colors">
+                                        <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-zinc-500">Email</h3>
+                                        <a href="mailto:info@newpathlogistics.com" className="text-2xl font-bold text-zinc-900 hover:text-zinc-600 transition-colors">
                                             info@newpathlogistics.com
                                         </a>
-                                        <p className="text-sm text-gray-500 mt-1">We typically reply within 24 hours.</p>
+                                        <p className="text-sm text-zinc-500 mt-1">We typically reply within 24 hours.</p>
                                     </div>
                                 </div>
 
                                 {/* Address */}
                                 <div className="flex items-start gap-6 group">
-                                    <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-xl group-hover:border-white transition-colors duration-300">
-                                        <MapPin className="w-8 h-8 text-white" />
+                                    <div className="p-4 bg-zinc-100 rounded-xl group-hover:bg-zinc-200 transition-colors duration-300">
+                                        <MapPin className="w-8 h-8 text-zinc-900" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-gray-400">Headquarters</h3>
-                                        <address className="text-2xl font-bold text-white not-italic leading-tight">
+                                        <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-zinc-500">Headquarters</h3>
+                                        <address className="text-2xl font-bold text-zinc-900 not-italic leading-tight">
                                             123 Logistics Way<br />
                                             Denver, CO 80202
                                         </address>
@@ -108,53 +108,51 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                         </div>
 
                         {/* Form Side */}
-                        <div className="bg-black p-8 md:p-12 rounded-2xl border border-zinc-800 shadow-2xl relative overflow-hidden">
-                            {/* Decorative glow */}
-                            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-white/5 rounded-full blur-[60px] pointer-events-none"></div>
+                        <div className="bg-white p-8 md:p-12 rounded-xl border border-zinc-200 shadow-xl relative overflow-hidden">
 
-                            <h3 className="text-2xl font-bold mb-2 uppercase tracking-wide text-white relative z-10 flex items-center gap-3">
+                            <h3 className="text-2xl font-bold mb-2 uppercase tracking-wide text-zinc-900 relative z-10 flex items-center gap-3">
                                 <MessageSquare className="w-6 h-6" />
                                 Send a Message
                             </h3>
-                            <p className="text-gray-500 mb-8 relative z-10">Use the form below to reach out directly.</p>
+                            <p className="text-zinc-500 mb-8 relative z-10">Use the form below to reach out directly.</p>
 
                             <form className="space-y-6 relative z-10">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-bold uppercase tracking-wider mb-2 text-gray-400">Name</label>
+                                    <label htmlFor="name" className="block text-sm font-bold uppercase tracking-wider mb-2 text-zinc-500">Name</label>
                                     <input
                                         type="text"
                                         id="name"
-                                        className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
+                                        className="w-full bg-zinc-50 border border-zinc-200 px-4 py-4 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors rounded-lg"
                                         placeholder="YOUR NAME"
                                     />
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
-                                        <label htmlFor="email" className="block text-sm font-bold uppercase tracking-wider mb-2 text-gray-400">Email</label>
+                                        <label htmlFor="email" className="block text-sm font-bold uppercase tracking-wider mb-2 text-zinc-500">Email</label>
                                         <input
                                             type="email"
                                             id="email"
-                                            className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
+                                            className="w-full bg-zinc-50 border border-zinc-200 px-4 py-4 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors rounded-lg"
                                             placeholder="YOUR EMAIL"
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="phone" className="block text-sm font-bold uppercase tracking-wider mb-2 text-gray-400">Phone</label>
+                                        <label htmlFor="phone" className="block text-sm font-bold uppercase tracking-wider mb-2 text-zinc-500">Phone</label>
                                         <input
                                             type="tel"
                                             id="phone"
-                                            className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
+                                            className="w-full bg-zinc-50 border border-zinc-200 px-4 py-4 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors rounded-lg"
                                             placeholder="(555) 123-4567"
                                         />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="subject" className="block text-sm font-bold uppercase tracking-wider mb-2 text-gray-400">I'm interested in...</label>
+                                    <label htmlFor="subject" className="block text-sm font-bold uppercase tracking-wider mb-2 text-zinc-500">I'm interested in...</label>
                                     <select
                                         id="subject"
-                                        className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors appearance-none"
+                                        className="w-full bg-zinc-50 border border-zinc-200 px-4 py-4 text-zinc-900 focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors appearance-none rounded-lg"
                                     >
                                         <option>General Inquiry</option>
                                         <option>Driving Opportunities</option>
@@ -164,18 +162,18 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                                 </div>
 
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-bold uppercase tracking-wider mb-2 text-gray-400">Message</label>
+                                    <label htmlFor="message" className="block text-sm font-bold uppercase tracking-wider mb-2 text-zinc-500">Message</label>
                                     <textarea
                                         id="message"
                                         rows={4}
-                                        className="w-full bg-[#1A1A1A] border border-zinc-700 px-4 py-4 text-white placeholder-zinc-600 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors resize-none"
+                                        className="w-full bg-zinc-50 border border-zinc-200 px-4 py-4 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors resize-none rounded-lg"
                                         placeholder="HOW CAN WE HELP YOU?"
                                     ></textarea>
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-white text-black font-black uppercase tracking-widest py-5 hover:bg-gray-200 transition-all duration-300 text-lg flex items-center justify-center gap-2 mt-4"
+                                    className="w-full bg-zinc-900 text-white font-black uppercase tracking-widest py-5 hover:bg-zinc-800 transition-all duration-300 text-lg flex items-center justify-center gap-2 mt-4 rounded-lg"
                                 >
                                     Send Message
                                     <Send className="w-5 h-5" />
