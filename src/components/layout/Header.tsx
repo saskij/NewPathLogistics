@@ -36,7 +36,7 @@ export default function Header() {
         <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#121212]/95 border-b border-white/5 h-16' : 'bg-[#121212]/0 border-b border-white/0 h-20'} backdrop-blur-md`}>
             <div className="container mx-auto px-4 h-full flex justify-between items-center">
                 <Link href="/" className="relative z-50 self-start" onClick={handleLogoClick}>
-                    <div className={`relative transition-all duration-500 ease-in-out ${isScrolled ? 'h-32 w-64 mt-0' : 'h-48 w-96 mt-2'}`}>
+                    <div className={`relative transition-all duration-500 ease-in-out ${isScrolled ? 'h-20 w-40 md:h-32 md:w-64 mt-0' : 'h-24 w-48 md:h-48 md:w-96 mt-2'}`}>
                         <Image
                             src={logoImg}
                             alt="New Path Logistics Logo"
@@ -60,7 +60,7 @@ export default function Header() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className={`md:hidden relative z-[70] h-20 flex items-center transition-colors duration-300 ${isMenuOpen ? 'text-black' : 'text-white'}`}
+                    className={`md:hidden relative z-[100] h-20 flex items-center transition-colors duration-300 ${isMenuOpen ? 'text-black' : 'text-white'}`}
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
@@ -68,7 +68,7 @@ export default function Header() {
                 </button>
 
                 {/* Mobile Navigation Overlay */}
-                <div className={`fixed inset-0 bg-white z-[60] flex flex-col justify-center items-center transition-transform duration-300 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`fixed inset-0 bg-white z-[90] flex flex-col justify-center items-center transition-transform duration-300 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <nav>
                         <ul className="flex flex-col items-center space-y-8 text-2xl font-bold uppercase tracking-widest">
                             <li>
