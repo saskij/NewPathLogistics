@@ -51,7 +51,7 @@ export default function Careers() {
                 {/* Image Side */}
                 <div className="relative h-[500px] lg:h-auto min-h-[600px] bg-gray-200">
                     <Image
-                        src="/driver-fleet.jpg"
+                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/driver-fleet.jpg`}
                         alt="Professional New Path Logistics Driver"
                         fill
                         className="object-cover"

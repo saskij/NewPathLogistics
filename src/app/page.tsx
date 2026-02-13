@@ -13,7 +13,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-new.jpg"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new.jpg`}
             alt="New Path Logistics Truck on Highway"
             fill
             className="object-cover object-center"
