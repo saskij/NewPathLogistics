@@ -26,14 +26,14 @@ export default function Home() {
           {/* Overlay */}
           {/* Overlay */}
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 opacity-100" />
+          <div className="absolute inset-0 bg-black/60 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.4)_0%,rgba(0,0,0,0.8)_100%)]" />
         </div>
 
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-start pt-48 pb-20">
-          <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-black uppercase tracking-tighter mb-8 max-w-6xl leading-[0.8] text-white drop-shadow-2xl font-sans">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold uppercase tracking-tighter mb-8 max-w-6xl leading-tight text-white drop-shadow-2xl font-sans">
             Nationwide<br />
-            <span className="text-zinc-300">Trucking</span>
+            <span className="text-zinc-200">Trucking</span>
           </h1>
 
           <div className="max-w-2xl mb-12 pl-1 border-l-8 border-white">
@@ -46,13 +46,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-6">
             <Link
               href="/contact"
-              className="px-12 py-6 bg-white text-black text-2xl font-black uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(220,38,38,0.5)] transform hover:-translate-y-2 rounded-sm"
+              className="px-8 py-4 bg-white text-black text-base font-bold uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(220,38,38,0.5)] transform hover:-translate-y-2 rounded-sm"
             >
               Get a Quote
             </Link>
             <Link
               href="/careers"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white text-lg font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
+              className="px-6 py-3 bg-transparent border-2 border-white text-white text-base font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm flex items-center"
             >
               Apply to Drive
             </Link>

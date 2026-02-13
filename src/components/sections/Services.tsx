@@ -48,7 +48,7 @@ export default function Services() {
                         return (
                             <div
                                 key={index}
-                                className="group p-10 bg-zinc-900 border border-zinc-800 rounded-sm hover:border-white transition-all duration-300 flex flex-col items-start"
+                                className="group p-10 bg-zinc-900 border border-zinc-700/60 rounded-sm hover:border-white transition-all duration-300 flex flex-col items-start"
                             >
                                 <div className="mb-6 p-3 bg-white/5 rounded-lg group-hover:bg-white/10 transition-colors">
                                     <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
