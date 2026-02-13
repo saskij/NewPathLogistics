@@ -3,12 +3,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import logoImg from '../../../public/logo.png';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,10 +25,17 @@ export default function Header() {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (pathname === '/') {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
+
     return (
         <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#121212]/95 border-b border-white/5 h-16' : 'bg-[#121212]/0 border-b border-white/0 h-20'} backdrop-blur-md`}>
             <div className="container mx-auto px-4 h-full flex justify-between items-center">
-                <Link href="/" className="relative z-50 self-start">
+                <Link href="/" className="relative z-50 self-start" onClick={handleLogoClick}>
                     <div className={`relative transition-all duration-500 ease-in-out ${isScrolled ? 'h-32 w-64 mt-0' : 'h-48 w-96 mt-2'}`}>
                         <Image
                             src={logoImg}
