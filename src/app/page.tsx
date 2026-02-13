@@ -18,7 +18,7 @@ export default function Home() {
             src={heroBg}
             alt="New Path Logistics Truck on Highway"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center brightness-[0.75] contrast-[1.2]"
             priority
             quality={90}
             placeholder="blur"

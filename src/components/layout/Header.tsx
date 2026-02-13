@@ -11,6 +11,7 @@ import logoImg from '../../../public/logo.png';
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isLogoVisible, setIsLogoVisible] = useState(true);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -20,6 +21,25 @@ export default function Header() {
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Intersection Observer to hide header logo when footer is visible
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsLogoVisible(!entry.isIntersecting);
+            },
+            { threshold: 0.1 } // Trigger when 10% of footer is visible
+        );
+
+        const footer = document.getElementById('footer');
+        if (footer) {
+            observer.observe(footer);
+        }
+
+        return () => {
+            if (footer) observer.unobserve(footer);
+        };
     }, []);
 
     const toggleMenu = () => {
@@ -37,7 +57,11 @@ export default function Header() {
         <>
             <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#121212]/95 border-b border-white/5 h-16' : 'bg-[#121212]/0 border-b border-white/0 h-20'} backdrop-blur-md`}>
                 <div className="container mx-auto px-4 h-full flex justify-between items-center">
-                    <Link href="/" className="relative z-50 self-start" onClick={handleLogoClick}>
+                    <Link
+                        href="/"
+                        className={`relative z-50 self-start transition-opacity duration-300 ${isLogoVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                        onClick={handleLogoClick}
+                    >
                         <div className={`relative transition-all duration-500 ease-in-out ${isScrolled ? 'h-20 w-40 md:h-32 md:w-64 mt-0' : 'h-24 w-48 md:h-48 md:w-96 mt-2'}`}>
                             <Image
                                 src={logoImg}
@@ -79,7 +103,7 @@ export default function Header() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
                         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 bg-zinc-950/95 backdrop-blur-xl z-[100] flex flex-col md:hidden"
+                        className="fixed inset-0 bg-zinc-950/90 backdrop-blur-xl z-[100] flex flex-col md:hidden"
                     >
                         {/* Header Row: Logo & Close Button */}
                         <div className="container mx-auto px-4 h-24 flex justify-between items-center shrink-0 border-b border-white/10">

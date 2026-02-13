@@ -1,14 +1,24 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
+import logoImg from '../../../public/logo.png';
 
 export default function Footer() {
     return (
-        <footer className="bg-black text-white pt-24 pb-8 border-t border-zinc-900">
+        <footer id="footer" className="bg-black text-white pt-24 pb-8 border-t border-zinc-900">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-20">
 
-                    {/* Contact Info */}
+                    {/* Contact Info & Logo */}
                     <div>
+                        <Link href="/" className="block mb-8 relative w-48 h-24">
+                            <Image
+                                src={logoImg}
+                                alt="New Path Logistics"
+                                fill
+                                className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2]"
+                            />
+                        </Link>
                         <h3 className="text-xl font-bold uppercase tracking-widest mb-8 text-white">Contact Us</h3>
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4 group">
