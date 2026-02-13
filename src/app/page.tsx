@@ -23,28 +23,28 @@ export default function Home() {
             placeholder="blur"
           />
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-transparent to-transparent opacity-80" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black opacity-90" />
         </div>
 
         {/* Content */}
-        <div className="container mx-auto px-4 relative z-10 flex flex-col items-start pt-20">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-6 max-w-5xl leading-[0.9]">
-            Real Truckers.<br />
-            <span className="text-gray-300">Real Aptitude.</span>
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-start pt-32 pb-12">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter mb-8 max-w-6xl leading-[0.85] text-white drop-shadow-2xl">
+            Nationwide<br />
+            <span className="text-gray-200">Trucking</span>
           </h1>
 
-          <div className="max-w-2xl mb-10 pl-1 border-l-4 border-white/30">
-            <p className="text-lg md:text-2xl text-gray-200 font-light leading-relaxed pl-6">
+          <div className="max-w-2xl mb-12 pl-1 border-l-8 border-white">
+            <p className="text-xl md:text-3xl text-gray-100 font-medium leading-relaxed pl-8 drop-shadow-lg">
               At New Path Logistics, success is earned through skill and performance.
-              We provide real opportunities to grow and be rewarded based on merit.
+              Real opportunities based on merit.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-5">
+          <div className="flex flex-col sm:flex-row gap-6">
             <Link
               href="/contact"
-              className="px-8 py-4 bg-white text-black text-lg font-bold uppercase tracking-wider hover:bg-gray-200 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+              className="px-12 py-6 bg-white text-black text-2xl font-black uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(220,38,38,0.5)] transform hover:-translate-y-2 rounded-sm"
             >
               Get a Quote
             </Link>
