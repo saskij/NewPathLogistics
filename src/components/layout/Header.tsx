@@ -117,6 +117,12 @@ export default function Header() {
                                 </Link>
                             </li>
                         </ul>
+                        <a
+                            href="tel:5551234567"
+                            className="ml-8 border border-white/80 text-white px-5 py-2 font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-all rounded-sm whitespace-nowrap"
+                        >
+                            Call Us (555) 123-4567
+                        </a>
                     </nav>
 
                     {/* Mobile Menu Toggle (Visible only when menu is closed) */}
@@ -164,6 +170,22 @@ export default function Header() {
                         {/* Menu Items */}
                         <nav className="flex-1 flex flex-col justify-center items-center py-8">
                             <ul className="flex flex-col items-center space-y-8 text-3xl font-bold uppercase tracking-widest w-full">
+                                {/* Mobile Call Us Button - Top of list for visibility */}
+                                <motion.li
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.05 }}
+                                    className="w-full px-6 mb-4"
+                                >
+                                    <a
+                                        href="tel:5551234567"
+                                        onClick={toggleMenu}
+                                        className="block w-full py-4 text-center border border-white/80 text-white font-bold uppercase tracking-wider rounded-lg hover:bg-white hover:text-black transition-all"
+                                    >
+                                        Call Us (555) 123-4567
+                                    </a>
+                                </motion.li>
+
                                 {['Home', 'Services', 'Careers', 'About', 'Contact'].map((item, index) => {
                                     const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`;
                                     const isActive = pathname === path;
