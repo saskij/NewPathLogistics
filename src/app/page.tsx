@@ -4,6 +4,7 @@ import Services from "@/components/sections/Services";
 import Advantage from "@/components/sections/Advantage";
 import Careers from "@/components/sections/Careers";
 import AboutContact from "@/components/sections/AboutContact";
+import WhyDrive from "@/components/sections/WhyDrive";
 import heroBg from "../../public/hero-new.jpg";
 
 export default function Home() {
@@ -60,6 +61,9 @@ export default function Home() {
 
       {/* Services Section */}
       <Services />
+
+      {/* Why Drive Section */}
+      <WhyDrive />
 
       {/* Advantage Section */}
       <Advantage />
