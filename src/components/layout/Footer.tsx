@@ -5,13 +5,13 @@ import logoImg from '../../../public/logo.png';
 
 export default function Footer() {
     return (
-        <footer id="footer" className="bg-black text-white pt-24 pb-8 border-t border-zinc-900">
+        <footer id="footer" className="bg-black text-white pt-20 pb-8 border-t border-zinc-900">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 mb-20">
 
-                    {/* Contact Info & Logo */}
-                    <div>
-                        <Link href="/" className="block mb-8 relative w-48 h-24">
+                    {/* Column 1: Brand & Contact */}
+                    <div className="flex flex-col items-start">
+                        <Link href="/" className="block mb-8 relative w-56 h-28 -ml-2">
                             <Image
                                 src={logoImg}
                                 alt="New Path Logistics"
@@ -19,77 +19,61 @@ export default function Footer() {
                                 className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2]"
                             />
                         </Link>
-                        <h3 className="text-xl font-bold uppercase tracking-widest mb-8 text-white">Contact Us</h3>
-                        <ul className="space-y-6">
-                            <li className="flex items-start gap-4 group">
-                                <div className="mt-1">
-                                    <Phone className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
-                                </div>
-                                <div>
-                                    <p className="text-xs text-zinc-500 uppercase tracking-widest mb-1">Phone</p>
-                                    <p className="text-lg font-bold hover:text-white transition-colors">
-                                        <a href="tel:5551234567">(555) 123-4567</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-4 group">
-                                <div className="mt-1">
-                                    <Mail className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
-                                </div>
-                                <div>
-                                    <p className="text-xs text-zinc-500 uppercase tracking-widest mb-1">Email</p>
-                                    <p className="text-lg font-bold hover:text-white transition-colors">
-                                        <a href="mailto:info@newpathlogistics.com">info@newpathlogistics.com</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-4 group">
-                                <div className="mt-1">
-                                    <MapPin className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
-                                </div>
-                                <div>
-                                    <p className="text-xs text-zinc-500 uppercase tracking-widest mb-1">Headquarters</p>
-                                    <p className="text-lg font-bold text-zinc-300">
-                                        123 Logistics Way<br />
-                                        Denver, CO 80202
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
 
-                    {/* Social & Navigation */}
-                    <div className="flex flex-col items-start lg:items-center">
-                        <h3 className="text-xl font-bold uppercase tracking-widest mb-8 text-white">Connect</h3>
-                        <div className="flex gap-4 mb-12">
-                            <a href="#" className="p-3 bg-zinc-900 rounded-full hover:bg-white hover:text-black transition-all duration-300">
-                                <Facebook className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-3 bg-zinc-900 rounded-full hover:bg-white hover:text-black transition-all duration-300">
-                                <Twitter className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-3 bg-zinc-900 rounded-full hover:bg-white hover:text-black transition-all duration-300">
-                                <Linkedin className="w-5 h-5" />
-                            </a>
-                        </div>
-
-                        <nav>
-                            <ul className="flex flex-col lg:flex-row gap-x-8 gap-y-4 text-xs font-bold uppercase tracking-widest text-zinc-500">
-                                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-                                <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-                                <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                                <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
-                                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                        <div className="space-y-6">
+                            <h3 className="text-sm text-zinc-500 font-bold uppercase tracking-widest mb-4">Contact Us</h3>
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-4 group">
+                                    <Phone className="w-5 h-5 text-red-600 mt-1" />
+                                    <div>
+                                        <p className="text-base font-bold hover:text-red-500 transition-colors">
+                                            <a href="tel:5551234567">(555) 123-4567</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-4 group">
+                                    <Mail className="w-5 h-5 text-red-600 mt-1" />
+                                    <div>
+                                        <p className="text-base font-bold hover:text-red-500 transition-colors">
+                                            <a href="mailto:info@newpathlogistics.com">info@newpathlogistics.com</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-4 group">
+                                    <MapPin className="w-5 h-5 text-red-600 mt-1" />
+                                    <div>
+                                        <p className="text-base text-zinc-300 leading-relaxed">
+                                            123 Logistics Way<br />
+                                            Denver, CO 80202
+                                        </p>
+                                    </div>
+                                </li>
                             </ul>
-                        </nav>
+                        </div>
                     </div>
 
-                    {/* Nationwide Coverage Map */}
-                    <div className="flex flex-col items-start lg:items-end">
-                        <h3 className="text-xl font-bold uppercase tracking-widest mb-8 text-white text-right w-full">Nationwide</h3>
-                        <div className="relative w-full max-w-sm aspect-[5/3] opacity-50 hover:opacity-80 transition-opacity duration-500">
-                            {/* Stylized US Map SVG - Keeping original path but refining styling */}
-                            <svg viewBox="0 0 950 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full stroke-zinc-600 stroke-[2] hover:stroke-white transition-colors duration-500">
+                    {/* Column 2: Quick Links */}
+                    <div className="flex flex-col items-start md:items-center">
+                        <div className="w-full max-w-xs">
+                            <h3 className="text-lg font-bold uppercase tracking-widest mb-8 text-white border-l-4 border-red-600 pl-4">Quick Links</h3>
+                            <nav>
+                                <ul className="flex flex-col space-y-4 text-sm font-medium tracking-wide text-zinc-400">
+                                    <li><Link href="/" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Home</Link></li>
+                                    <li><Link href="/services" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Services</Link></li>
+                                    <li><Link href="/about" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">About Us</Link></li>
+                                    <li><Link href="/careers" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Careers</Link></li>
+                                    <li><Link href="/contact" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Contact</Link></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    {/* Column 3: Nationwide Map */}
+                    <div className="flex flex-col items-start md:items-end">
+                        <h3 className="text-lg font-bold uppercase tracking-widest mb-8 text-white text-right w-full border-r-4 border-red-600 pr-4">Nationwide</h3>
+                        <div className="relative w-full aspect-[5/3] group">
+                            {/* Stylized US Map SVG - Increased contrast */}
+                            <svg viewBox="0 0 950 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full stroke-zinc-500 stroke-[2] group-hover:stroke-zinc-300 transition-colors duration-500">
                                 <path d="M936.8,127.3c-2.4-7.3-8.6-12.7-16-14.7c-9.6-2.6-19.4-1.6-28.7,2.1c-6.6,2.6-13.6,1.4-19.2-3.1
     c-7.3-5.9-16.7-7-25-2.8c-2,1-4.2,0.9-6.1-0.2c-5.9-3.3-12.3-5.2-19-6.3c-3.1-0.5-5.9-2.3-7.5-5c-3.3-5.5-8.3-9.5-14.5-11.4
     c-7.8-2.4-16.2-1.4-23.2,2.8c-1.8,1.1-4,1.4-6,0.8c-6.8-2-14-1.8-20.7,0.7c-4.4,1.6-9.1,1.1-13.2-1.3c-6.4-3.8-13.9-5.1-21.2-3.6
@@ -116,19 +100,37 @@ export default function Footer() {
     c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C921.2,138.8,934.3,134.9,936.8,127.3z"/>
                             </svg>
                             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
+                                <div className="w-2 h-2 bg-red-600 rounded-full animate-ping"></div>
+                                <div className="absolute top-0 left-0 w-2 h-2 bg-red-600 rounded-full"></div>
                             </div>
                         </div>
-                        <p className="text-xs text-zinc-600 mt-4 uppercase tracking-widest text-right w-full">Serving all 48 contiguous states</p>
+                        <p className="text-xs text-zinc-500 mt-4 uppercase tracking-widest text-right w-full">Serving all 48 contiguous states</p>
                     </div>
                 </div>
 
-                <div className="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-zinc-700 uppercase tracking-widest">
-                    <p>&copy; 2026 New Path Logistics. All rights reserved.</p>
-                    <div className="flex gap-6 mt-4 md:mt-0">
-                        <a href="#" className="hover:text-zinc-500 transition-colors">Privacy</a>
-                        <a href="#" className="hover:text-zinc-500 transition-colors">Terms</a>
-                        <a href="#" className="hover:text-zinc-500 transition-colors">Sitemap</a>
+                {/* Bottom Bar */}
+                <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+
+                    {/* Copyright & Links */}
+                    <div className="flex flex-col md:flex-row items-center gap-6 text-[10px] text-zinc-500 uppercase tracking-widest">
+                        <p>&copy; 2026 New Path Logistics.</p>
+                        <div className="flex gap-6">
+                            <a href="#" className="hover:text-white transition-colors">Privacy</a>
+                            <a href="#" className="hover:text-white transition-colors">Terms</a>
+                        </div>
+                    </div>
+
+                    {/* Social Media - Now at bottom */}
+                    <div className="flex gap-4">
+                        <a href="#" className="p-2 text-zinc-400 hover:text-white transition-all duration-300 hover:scale-110">
+                            <Facebook className="w-5 h-5" />
+                        </a>
+                        <a href="#" className="p-2 text-zinc-400 hover:text-white transition-all duration-300 hover:scale-110">
+                            <Twitter className="w-5 h-5" />
+                        </a>
+                        <a href="#" className="p-2 text-zinc-400 hover:text-white transition-all duration-300 hover:scale-110">
+                            <Linkedin className="w-5 h-5" />
+                        </a>
                     </div>
                 </div>
             </div>
