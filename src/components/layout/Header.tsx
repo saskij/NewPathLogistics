@@ -14,23 +14,26 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed w-full top-0 z-50 bg-[#121212]/95 backdrop-blur-md border-b border-white/5">
-            <div className="container mx-auto px-4 h-20 flex justify-between items-center">
-                <Link href="/" className="flex items-center gap-2 relative z-50">
-                    <div className="relative h-16 w-64 md:w-80 transition-all duration-300">
-                        <Image
-                            src={logoImg}
-                            alt="New Path Logistics Logo"
-                            fill
-                            className="object-contain object-left"
-                            priority
-                        />
+    return (
+        <header className="fixed w-full top-0 z-50 bg-[#121212]/95 backdrop-blur-md border-b border-white/5 h-20">
+            <div className="container mx-auto px-4 h-full flex justify-between items-start">
+                <Link href="/" className="relative z-50">
+                    <div className="bg-white h-28 w-64 md:w-80 px-4 flex items-center justify-center rounded-b-lg shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <div className="relative h-20 w-full">
+                            <Image
+                                src={logoImg}
+                                alt="New Path Logistics Logo"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
+                        </div>
                     </div>
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:block">
-                    <ul className="flex space-x-8 text-sm font-medium uppercase tracking-wide">
+                <nav className="hidden md:flex h-20 items-center">
+                    <ul className="flex space-x-8 text-sm font-bold uppercase tracking-wide">
                         <li><Link href="/" className="hover:text-white transition-colors text-white">Home</Link></li>
                         <li><Link href="/services" className="hover:text-white transition-colors text-gray-400">Services</Link></li>
                         <li><Link href="/about" className="hover:text-white transition-colors text-gray-400">About Us</Link></li>
@@ -41,7 +44,7 @@ export default function Header() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-white relative z-50"
+                    className="md:hidden text-white relative z-50 h-20 flex items-center"
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
