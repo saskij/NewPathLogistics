@@ -33,7 +33,6 @@ export default function Header() {
     };
 
     return (
-    return (
         <>
             <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#121212]/95 border-b border-white/5 h-16' : 'bg-[#121212]/0 border-b border-white/0 h-20'} backdrop-blur-md`}>
                 <div className="container mx-auto px-4 h-full flex justify-between items-center">
@@ -116,6 +115,5 @@ export default function Header() {
                 </nav>
             </div>
         </>
-    );
     );
 }
