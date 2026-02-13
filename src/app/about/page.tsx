@@ -1,5 +1,5 @@
 
-import { ShieldCheck, TrendingUp, Users, AlertTriangle, CheckCircle } from "lucide-react";
+import { ShieldCheck, TrendingUp, Users, MapPin } from "lucide-react";
 import Image from "next/image";
 import heroNew from "../../../public/hero-new.jpg";
 
@@ -7,96 +7,97 @@ export default function AboutPage() {
     return (
         <div className="bg-anthracite text-white min-h-screen">
 
-            {/* Story Section / Hero */}
-            <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden py-24">
+            {/* Hero Section (Dark) */}
+            <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden py-24">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src={heroNew}
                         alt="New Path Logistics Highway"
                         fill
-                        className="object-cover object-center grayscale brightness-50"
+                        className="object-cover object-center grayscale brightness-[0.4] contrast-[1.2]"
                         priority
                     />
-                    <div className="absolute inset-0 bg-black/70 mix-blend-multiply" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-transparent to-black/80" />
+                    <div className="absolute inset-0 bg-black/60 mix-blend-multiply" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/80" />
                 </div>
 
-                <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
-                    <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 text-white">
-                        Redefining the Road
+                <div className="container mx-auto px-4 relative z-10 text-center max-w-5xl">
+                    <h1 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-8 text-white drop-shadow-xl">
+                        Built on the Road
                     </h1>
                     <div className="w-24 h-1 bg-white mx-auto mb-10"></div>
-                    <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed mb-6">
-                        New Path Logistics is more than a transportation provider. We are a company built on the belief that logistics should be simple, transparent, and effective.
-                    </p>
-                    <p className="text-lg text-gray-400 font-light leading-relaxed">
-                        Our culture is forged from responsibility, honesty, and an unwavering commitment to results. We don't just move freight; we move the industry forward by valuing the people behind the wheel and the partners who trust us with their cargo.
+                    <p className="text-xl md:text-2xl text-zinc-300 font-light leading-relaxed mb-6 drop-shadow-md">
+                        Founded in Meridian, Idaho, by those who understand the true weight of every mile. We don’t just manage logistics; we respect the journey.
                     </p>
                 </div>
             </section>
 
-            {/* Core Values */}
-            <section className="py-24 bg-black">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-16 text-center">Core Values</h2>
+            {/* Our Philosophy (Light) */}
+            <section className="py-24 bg-zinc-50 text-zinc-900 border-t border-zinc-200">
+                <div className="container mx-auto px-4 text-center max-w-4xl">
+                    <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-8 text-zinc-900">Performance Over Labels</h2>
+                    <div className="w-24 h-1 bg-zinc-900 mx-auto mb-12"></div>
+                    <p className="text-xl leading-relaxed text-zinc-600">
+                        At New Path Logistics, success is measured by craftsmanship and responsibility, not by the past or stereotypes. We believe that true professionalism is demonstrated on the road, through every safe delivery and every kept promise.
+                    </p>
+                </div>
+            </section>
 
+            {/* Why Us (Dark) */}
+            <section className="py-24 bg-zinc-950 text-white border-t border-zinc-800">
+                <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {/* Integrity */}
-                        <div className="bg-zinc-900/50 p-10 border border-zinc-800 rounded-lg hover:border-white transition-all duration-300 group flex flex-col items-center text-center">
-                            <div className="mb-8 p-5 bg-white/5 rounded-full group-hover:bg-white/10 transition-colors">
-                                <ShieldCheck className="w-12 h-12 text-white" strokeWidth={1.5} />
+                        <div className="flex flex-col items-center text-center group">
+                            <div className="mb-8 p-6 bg-white/5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+                                <ShieldCheck className="w-10 h-10 text-white" strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-bold uppercase tracking-wide mb-4 text-white">Integrity</h3>
-                            <p className="text-gray-400 leading-relaxed text-lg">
-                                We do what we say. In an industry full of promises, we deliver facts. Transparency is our currency, and trust is our bottom line.
+                            <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-white">Integrity</h3>
+                            <p className="text-zinc-400 leading-relaxed text-lg px-4">
+                                Honesty is our only navigator. We operate with absolute transparency in every interaction.
                             </p>
                         </div>
 
-                        {/* Performance */}
-                        <div className="bg-zinc-900/50 p-10 border border-zinc-800 rounded-lg hover:border-white transition-all duration-300 group flex flex-col items-center text-center">
-                            <div className="mb-8 p-5 bg-white/5 rounded-full group-hover:bg-white/10 transition-colors">
-                                <TrendingUp className="w-12 h-12 text-white" strokeWidth={1.5} />
+                        {/* Accountability */}
+                        <div className="flex flex-col items-center text-center group">
+                            <div className="mb-8 p-6 bg-white/5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+                                <Users className="w-10 h-10 text-white" strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-bold uppercase tracking-wide mb-4 text-white">Performance</h3>
-                            <p className="text-gray-400 leading-relaxed text-lg">
-                                Merit is our only metric. We don't care about labels or past politics. We care about safe, on-time delivery and the drive to excel.
+                            <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-white">Accountability</h3>
+                            <p className="text-zinc-400 leading-relaxed text-lg px-4">
+                                We take ownership of the cargo and the people. Every mile is a commitment we keep.
                             </p>
                         </div>
 
-                        {/* Respect */}
-                        <div className="bg-zinc-900/50 p-10 border border-zinc-800 rounded-lg hover:border-white transition-all duration-300 group flex flex-col items-center text-center">
-                            <div className="mb-8 p-5 bg-white/5 rounded-full group-hover:bg-white/10 transition-colors">
-                                <Users className="w-12 h-12 text-white" strokeWidth={1.5} />
+                        {/* Excellence */}
+                        <div className="flex flex-col items-center text-center group">
+                            <div className="mb-8 p-6 bg-white/5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+                                <TrendingUp className="w-10 h-10 text-white" strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-bold uppercase tracking-wide mb-4 text-white">Respect</h3>
-                            <p className="text-gray-400 leading-relaxed text-lg">
-                                Real truckers deserve real respect. We treat our drivers as partners, not numbers. Your safety and livelihood are our priority.
+                            <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-white">Excellence</h3>
+                            <p className="text-zinc-400 leading-relaxed text-lg px-4">
+                                Only the highest standard of work. We don't settle for "good enough."
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Safety First */}
-            <section className="py-20 bg-zinc-900 border-t border-zinc-800 relative overflow-hidden">
-                {/* Abstract background element */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[80px] -mr-20 -mt-20 pointer-events-none"></div>
-
-                <div className="container mx-auto px-4 relative z-10">
-                    <div className="max-w-4xl mx-auto bg-black border border-white/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 shadow-2xl">
-                        <div className="min-w-[80px] h-[80px] bg-white text-black rounded-full flex items-center justify-center shrink-0">
-                            <AlertTriangle className="w-10 h-10" strokeWidth={2} />
-                        </div>
-                        <div>
-                            <h2 className="text-3xl font-bold uppercase tracking-wide mb-4 text-white">Safety First</h2>
-                            <p className="text-gray-400 text-lg leading-relaxed">
-                                We never compromise on safety. From rigorous equipment maintenance to ongoing driver training, we ensure that every mile driven is a safe one. Our commitment to safety protects our drivers, our cargo, and the communities we serve.
-                            </p>
-                        </div>
+            {/* Local Context (Light Accent) */}
+            <section className="py-24 bg-zinc-100 text-zinc-900 border-t border-zinc-200">
+                <div className="container mx-auto px-4 text-center">
+                    <div className="inline-flex items-center justify-center p-4 bg-white rounded-full shadow-lg mb-8">
+                        <MapPin className="w-8 h-8 text-red-600 mr-3" />
+                        <span className="text-xl font-bold uppercase tracking-widest text-zinc-900">Meridian, Idaho</span>
                     </div>
+                    <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-6 text-zinc-900">Proudly Based in Meridian</h2>
+                    <p className="text-xl text-zinc-600 max-w-2xl mx-auto leading-relaxed">
+                        Bringing the honesty, hard work, and resilience of our region to the highways of America.
+                    </p>
                 </div>
             </section>
 
         </div>
     );
 }
+
