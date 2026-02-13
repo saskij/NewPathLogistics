@@ -35,6 +35,10 @@ export default function Careers() {
                             ))}
                         </ul>
 
+                        <p className="text-sm text-gray-500 italic mb-8">
+                            * Specifics like home time and detention will be discussed during the interview to ensure they fit your needs.
+                        </p>
+
                         <Link
                             href="/careers"
                             className="inline-block px-10 py-5 bg-anthracite text-white text-lg font-bold uppercase tracking-wider hover:bg-black transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
