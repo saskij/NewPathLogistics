@@ -33,7 +33,7 @@ export default function AboutPage() {
             </section>
 
             {/* Our Philosophy (Light) */}
-            <section className="py-24 bg-zinc-50 text-zinc-900 border-t border-zinc-200">
+            <section className="py-20 bg-zinc-50 text-zinc-900 border-t border-zinc-200">
                 <div className="container mx-auto px-4 text-center max-w-4xl">
                     <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-8 text-zinc-900">Performance Over Labels</h2>
                     <div className="w-24 h-1 bg-zinc-900 mx-auto mb-12"></div>
@@ -43,39 +43,39 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Why Us (Dark) */}
-            <section className="py-24 bg-zinc-950 text-white border-t border-zinc-800">
+            {/* Why Us (Unified Light) */}
+            <section className="py-20 bg-zinc-50 text-zinc-900 border-t border-zinc-200">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {/* Integrity */}
-                        <div className="flex flex-col items-center text-center group">
-                            <div className="mb-8 p-6 bg-white/5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.05)]">
-                                <ShieldCheck className="w-10 h-10 text-white" strokeWidth={1.5} />
+                        <div className="flex flex-col items-center text-center group bg-white p-10 rounded-lg shadow-sm border border-zinc-200 hover:shadow-md transition-shadow">
+                            <div className="mb-8 p-6 bg-zinc-100 rounded-full group-hover:bg-zinc-200 transition-colors">
+                                <ShieldCheck className="w-10 h-10 text-zinc-900" strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-white">Integrity</h3>
-                            <p className="text-zinc-400 leading-relaxed text-lg px-4">
+                            <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-zinc-900">Integrity</h3>
+                            <p className="text-zinc-600 leading-relaxed text-lg px-4">
                                 Honesty is our only navigator. We operate with absolute transparency in every interaction.
                             </p>
                         </div>
 
                         {/* Accountability */}
-                        <div className="flex flex-col items-center text-center group">
-                            <div className="mb-8 p-6 bg-white/5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.05)]">
-                                <Users className="w-10 h-10 text-white" strokeWidth={1.5} />
+                        <div className="flex flex-col items-center text-center group bg-white p-10 rounded-lg shadow-sm border border-zinc-200 hover:shadow-md transition-shadow">
+                            <div className="mb-8 p-6 bg-zinc-100 rounded-full group-hover:bg-zinc-200 transition-colors">
+                                <Users className="w-10 h-10 text-zinc-900" strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-white">Accountability</h3>
-                            <p className="text-zinc-400 leading-relaxed text-lg px-4">
+                            <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-zinc-900">Accountability</h3>
+                            <p className="text-zinc-600 leading-relaxed text-lg px-4">
                                 We take ownership of the cargo and the people. Every mile is a commitment we keep.
                             </p>
                         </div>
 
                         {/* Excellence */}
-                        <div className="flex flex-col items-center text-center group">
-                            <div className="mb-8 p-6 bg-white/5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.05)]">
-                                <TrendingUp className="w-10 h-10 text-white" strokeWidth={1.5} />
+                        <div className="flex flex-col items-center text-center group bg-white p-10 rounded-lg shadow-sm border border-zinc-200 hover:shadow-md transition-shadow">
+                            <div className="mb-8 p-6 bg-zinc-100 rounded-full group-hover:bg-zinc-200 transition-colors">
+                                <TrendingUp className="w-10 h-10 text-zinc-900" strokeWidth={1.5} />
                             </div>
-                            <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-white">Excellence</h3>
-                            <p className="text-zinc-400 leading-relaxed text-lg px-4">
+                            <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-zinc-900">Excellence</h3>
+                            <p className="text-zinc-600 leading-relaxed text-lg px-4">
                                 Only the highest standard of work. We don't settle for "good enough."
                             </p>
                         </div>
@@ -83,10 +83,10 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Local Context (Light Accent) */}
-            <section className="py-24 bg-zinc-100 text-zinc-900 border-t border-zinc-200">
+            {/* Local Context (Unified Light) */}
+            <section className="py-20 bg-zinc-50 text-zinc-900 border-t border-zinc-200">
                 <div className="container mx-auto px-4 text-center">
-                    <div className="inline-flex items-center justify-center p-4 bg-white rounded-full shadow-lg mb-8">
+                    <div className="inline-flex items-center justify-center p-4 bg-white rounded-full shadow-sm border border-zinc-200 mb-8">
                         <MapPin className="w-8 h-8 text-red-600 mr-3" />
                         <span className="text-xl font-bold uppercase tracking-widest text-zinc-900">Meridian, Idaho</span>
                     </div>
