@@ -7,6 +7,8 @@ import AboutContact from "@/components/sections/AboutContact";
 import WhyDrive from "@/components/sections/WhyDrive";
 import heroBg from "../../public/hero-new.jpg";
 
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-anthracite text-white flex flex-col">
@@ -60,6 +62,9 @@ export default function Home() {
 
       {/* Services Section */}
       <Services />
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
 
       {/* Why Drive Section */}
       <WhyDrive />
