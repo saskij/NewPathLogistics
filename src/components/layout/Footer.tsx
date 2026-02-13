@@ -74,7 +74,7 @@ export default function Footer() {
                     {/* Column 3: Nationwide Map */}
                     <div className="flex flex-col items-start md:items-end h-full">
                         <h3 className="text-lg font-bold uppercase tracking-widest mb-8 text-white text-right w-full border-r-4 border-red-600 pr-4">Nationwide</h3>
-                        <div className="relative w-full max-w-[300px] aspect-[4/3] group ml-auto">
+                        <div className="relative w-full max-w-[360px] aspect-[4/3] group ml-auto">
                             <Image
                                 src={mapImg}
                                 alt="Nationwide Coverage Map"
