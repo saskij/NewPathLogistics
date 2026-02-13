@@ -22,7 +22,7 @@ export default function Header() {
                             src={logoImg}
                             alt="New Path Logistics Logo"
                             fill
-                            className="object-contain object-left invert brightness-0 drop-shadow-lg"
+                            className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2] drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                             priority
                         />
                     </div>
