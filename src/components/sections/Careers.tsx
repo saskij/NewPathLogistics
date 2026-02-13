@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import driverFleet from '../../../public/driver-fleet.jpg';
+import joinFleet from '../../../public/Join our fleet.jpg';
 
 const benefits = [
     "$1,800 Weekly Guaranteed (Gross)",
@@ -52,7 +52,7 @@ export default function Careers() {
                 {/* Image Side */}
                 <div className="relative h-[500px] lg:h-auto min-h-[600px] bg-gray-200">
                     <Image
-                        src={driverFleet}
+                        src={joinFleet}
                         alt="Professional New Path Logistics Driver"
                         fill
                         className="object-cover brightness-[0.7] contrast-[1.1]"
