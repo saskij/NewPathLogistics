@@ -35,9 +35,12 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="py-20 bg-white">
+        <section className="py-24 bg-[#1A1A1A]">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center text-anthracite mb-16 uppercase tracking-tight">Our Services</h2>
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-white mb-4">Our Services</h2>
+                    <div className="w-24 h-1 bg-white mx-auto"></div>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => {
@@ -45,16 +48,16 @@ export default function Services() {
                         return (
                             <div
                                 key={index}
-                                className="group p-8 bg-anthracite text-white hover:bg-black transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col items-start border-l-4 border-transparent hover:border-white"
+                                className="group p-8 bg-[#1A1A1A] border border-zinc-800 rounded-lg hover:border-white transition-all duration-300 flex flex-col items-start"
                             >
-                                <div className="mb-6 p-3 bg-white/10 rounded-lg group-hover:bg-white/20 transition-colors">
+                                <div className="mb-6 p-3 bg-white/5 rounded-lg group-hover:bg-white/10 transition-colors">
                                     <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-xl font-bold mb-4 uppercase tracking-wide">{service.title}</h3>
-                                <p className="text-gray-400 mb-6 flex-grow leading-relaxed group-hover:text-gray-300">
+                                <h3 className="text-xl font-bold mb-4 uppercase tracking-wide text-white">{service.title}</h3>
+                                <p className="text-gray-400 mb-8 flex-grow leading-relaxed">
                                     {service.description}
                                 </p>
-                                <button className="text-sm font-bold uppercase tracking-wider border-b border-white/30 pb-1 hover:border-white transition-colors">
+                                <button className="px-6 py-2 border border-white/30 text-white text-sm font-bold uppercase tracking-wider rounded hover:bg-white hover:text-black transition-all duration-300">
                                     Learn More
                                 </button>
                             </div>
