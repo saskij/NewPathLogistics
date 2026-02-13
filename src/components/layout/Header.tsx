@@ -17,7 +17,7 @@ export default function Header() {
         <header className="fixed w-full top-0 z-50 bg-[#121212]/95 backdrop-blur-md border-b border-white/5 h-20">
             <div className="container mx-auto px-4 h-full flex justify-between items-start">
                 <Link href="/" className="relative z-50">
-                    <div className="bg-white h-48 w-56 md:w-64 px-1 flex items-center justify-center rounded-b-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div className="bg-white h-48 w-44 md:w-52 px-1 flex items-center justify-center rounded-b-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                         <div className="relative h-44 w-full">
                             <Image
                                 src={logoImg}
