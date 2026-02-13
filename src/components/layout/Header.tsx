@@ -15,21 +15,21 @@ export default function Header() {
 
     return (
         <header className="fixed w-full top-0 z-50 bg-[#121212]/95 backdrop-blur-md border-b border-white/5 h-20">
-            <div className="container mx-auto px-4 h-full flex justify-between items-start">
+            <div className="container mx-auto px-4 h-full flex justify-between items-center">
                 <Link href="/" className="relative z-50">
-                    <div className="relative h-28 w-48 md:w-56 -mt-2">
+                    <div className="relative h-32 w-64 -mt-4">
                         <Image
                             src={logoImg}
                             alt="New Path Logistics Logo"
                             fill
-                            className="object-contain object-left invert brightness-0"
+                            className="object-contain object-left invert brightness-0 drop-shadow-lg"
                             priority
                         />
                     </div>
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex h-20 items-center">
+                <nav className="hidden md:flex h-20 items-center ml-12">
                     <ul className="flex space-x-8 text-sm font-bold uppercase tracking-wide">
                         <li><Link href="/" className="hover:text-white transition-colors text-white">Home</Link></li>
                         <li><Link href="/services" className="hover:text-white transition-colors text-gray-400">Services</Link></li>
