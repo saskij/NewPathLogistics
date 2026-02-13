@@ -75,12 +75,47 @@ export default function Header() {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex h-20 items-center ml-12">
-                        <ul className="flex space-x-8 text-sm font-bold uppercase tracking-wide">
-                            <li><Link href="/" className="hover:text-white transition-colors text-white">Home</Link></li>
-                            <li><Link href="/services" className="hover:text-white transition-colors text-gray-400">Services</Link></li>
-                            <li><Link href="/about" className="hover:text-white transition-colors text-gray-400">About Us</Link></li>
-                            <li><Link href="/careers" className="hover:text-white transition-colors text-gray-400">Careers</Link></li>
-                            <li><Link href="/contact" className="hover:text-white transition-colors text-gray-400">Contact</Link></li>
+                        <ul className="flex space-x-6 lg:space-x-10 text-sm font-bold uppercase tracking-wide">
+                            <li>
+                                <Link
+                                    href="/"
+                                    className={`transition-colors ${pathname === '/' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                >
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/services"
+                                    className={`transition-colors ${pathname === '/services' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                >
+                                    Services
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/careers"
+                                    className={`transition-colors ${pathname === '/careers' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                >
+                                    Careers
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/about"
+                                    className={`transition-colors ${pathname === '/about' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                >
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/contact"
+                                    className={`transition-colors ${pathname === '/contact' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                >
+                                    Contact
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
 
@@ -129,22 +164,26 @@ export default function Header() {
                         {/* Menu Items */}
                         <nav className="flex-1 flex flex-col justify-center items-center py-8">
                             <ul className="flex flex-col items-center space-y-8 text-3xl font-bold uppercase tracking-widest w-full">
-                                {['Home', 'Services', 'About', 'Careers', 'Contact'].map((item, index) => (
-                                    <motion.li
-                                        key={item}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.1 + index * 0.1 }}
-                                    >
-                                        <Link
-                                            href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
-                                            onClick={toggleMenu}
-                                            className="text-white hover:text-red-500 transition-colors"
+                                {['Home', 'Services', 'Careers', 'About', 'Contact'].map((item, index) => {
+                                    const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`;
+                                    const isActive = pathname === path;
+                                    return (
+                                        <motion.li
+                                            key={item}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.1 + index * 0.1 }}
                                         >
-                                            {item}
-                                        </Link>
-                                    </motion.li>
-                                ))}
+                                            <Link
+                                                href={path}
+                                                onClick={toggleMenu}
+                                                className={`transition-colors ${isActive ? 'text-red-500' : 'text-white hover:text-red-500'}`}
+                                            >
+                                                {item === 'About' ? 'About Us' : item}
+                                            </Link>
+                                        </motion.li>
+                                    );
+                                })}
                             </ul>
 
                             {/* CTA Button */}

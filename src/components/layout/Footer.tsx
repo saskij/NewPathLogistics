@@ -63,8 +63,8 @@ export default function Footer() {
                                 <ul className="flex flex-col justify-between h-full min-h-[200px] text-sm font-medium tracking-wide text-zinc-400">
                                     <li><Link href="/" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Home</Link></li>
                                     <li><Link href="/services" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Services</Link></li>
-                                    <li><Link href="/about" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">About Us</Link></li>
                                     <li><Link href="/careers" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Careers</Link></li>
+                                    <li><Link href="/about" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">About Us</Link></li>
                                     <li><Link href="/contact" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Contact</Link></li>
                                 </ul>
                             </nav>
