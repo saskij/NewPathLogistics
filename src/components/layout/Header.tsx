@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import logoImg from '../../../public/logo.png';
 
 export default function Header() {
     return (
         <header className="fixed w-full top-0 z-50 bg-anthracite/90 backdrop-blur-sm border-b border-white/10">
-            <div className="container mx-auto px-4 h-20 flex justify-between items-center">
+            <div className="container mx-auto px-4 h-28 flex justify-between items-center">
                 <Link href="/" className="flex items-center gap-2">
-                    <div className="relative h-12 w-48">
+                    <div className="relative h-24 w-96">
                         <Image
-                            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.png`}
+                            src={logoImg}
                             alt="New Path Logistics Logo"
                             fill
                             className="object-contain object-left"

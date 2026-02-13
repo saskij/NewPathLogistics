@@ -4,6 +4,7 @@ import Services from "@/components/sections/Services";
 import Advantage from "@/components/sections/Advantage";
 import Careers from "@/components/sections/Careers";
 import AboutContact from "@/components/sections/AboutContact";
+import heroBg from "../../public/hero-new.jpg";
 
 export default function Home() {
   return (
@@ -13,12 +14,13 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new.jpg`}
+            src={heroBg}
             alt="New Path Logistics Truck on Highway"
             fill
             className="object-cover object-center"
             priority
             quality={90}
+            placeholder="blur"
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
