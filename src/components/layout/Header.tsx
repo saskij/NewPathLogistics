@@ -2,22 +2,32 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logoImg from '../../../public/logo.png';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     return (
-        <header className="fixed w-full top-0 z-50 bg-[#121212]/95 backdrop-blur-md border-b border-white/5 h-20">
+        <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#121212]/95 border-b border-white/5 h-16' : 'bg-[#121212]/0 border-b border-white/0 h-20'} backdrop-blur-md`}>
             <div className="container mx-auto px-4 h-full flex justify-between items-center">
                 <Link href="/" className="relative z-50 self-start">
-                    <div className="relative h-48 w-96 mt-2">
+                    <div className={`relative transition-all duration-500 ease-in-out ${isScrolled ? 'h-32 w-64 mt-0' : 'h-48 w-96 mt-2'}`}>
                         <Image
                             src={logoImg}
                             alt="New Path Logistics Logo"
