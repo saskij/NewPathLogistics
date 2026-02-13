@@ -1,11 +1,20 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
     return (
         <header className="fixed w-full top-0 z-50 bg-anthracite/90 backdrop-blur-sm border-b border-white/10">
             <div className="container mx-auto px-4 h-20 flex justify-between items-center">
                 <Link href="/" className="flex items-center gap-2">
-                    <span className="text-2xl font-bold uppercase tracking-tighter text-white">New Path</span>
+                    <div className="relative h-12 w-48">
+                        <Image
+                            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.png`}
+                            alt="New Path Logistics Logo"
+                            fill
+                            className="object-contain object-left"
+                            priority
+                        />
+                    </div>
                 </Link>
                 <nav className="hidden md:block">
                     <ul className="flex space-x-8 text-sm font-medium uppercase tracking-wide">
