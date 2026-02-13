@@ -2,13 +2,13 @@ import { Send } from "lucide-react";
 
 export default function AboutContact() {
     return (
-        <section className="py-32 bg-anthracite text-white relative overflow-hidden">
+        <section className="py-32 bg-white text-zinc-900 relative overflow-hidden">
             {/* Mountain SVG Background - Silhouette */}
-            <div className="absolute bottom-0 left-0 w-full leading-none z-0 text-black">
+            <div className="absolute bottom-0 left-0 w-full leading-none z-0 text-zinc-100">
                 <svg className="w-full h-auto" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25" fill="#000"></path>
-                    <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5" fill="#000"></path>
-                    <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" fill="#000"></path>
+                    <path d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z" opacity=".25" fill="currentColor"></path>
+                    <path d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z" opacity=".5" fill="currentColor"></path>
+                    <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" fill="currentColor"></path>
                 </svg>
             </div>
 
@@ -17,31 +17,31 @@ export default function AboutContact() {
 
                     {/* About Text Side */}
                     <div className="mt-8">
-                        <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight mb-8">About New Path</h2>
-                        <div className="w-24 h-1 bg-white mb-10"></div>
+                        <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight mb-8 text-zinc-900">About New Path</h2>
+                        <div className="w-24 h-1 bg-zinc-900 mb-10"></div>
 
-                        <div className="space-y-8 text-gray-300 font-light text-lg leading-relaxed">
+                        <div className="space-y-8 text-zinc-700 font-light text-lg leading-relaxed">
                             <p>
-                                <strong className="text-white font-bold block mb-2 text-xl uppercase tracking-wide">Merit & Performance</strong>
+                                <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">Merit & Performance</strong>
                                 At New Path Logistics, we believe that success should be earned, not given. We have built a culture where hard work, skill, and dedication are the sole drivers of advancement. Your background doesn't define you here—your performance does.
                             </p>
 
                             <p>
-                                <strong className="text-white font-bold block mb-2 text-xl uppercase tracking-wide">Integrity in Motion</strong>
+                                <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">Integrity in Motion</strong>
                                 We operate with absolute transparency and honesty. Whether it’s clear pricing for our clients or straightforward pay for our drivers, integrity is at the core of every mile we drive. We do what we say, every time.
                             </p>
 
                             <p>
-                                <strong className="text-white font-bold block mb-2 text-xl uppercase tracking-wide">A Partnership</strong>
+                                <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">A Partnership</strong>
                                 We view our drivers and clients as partners. When you drive for New Path, you're not just a number; you're the backbone of our operation. We invest in top‐tier equipment and support systems to ensure you succeed on the road.
                             </p>
                         </div>
                     </div>
 
                     {/* Form Side */}
-                    <div className="bg-black p-8 md:p-12 shadow-2xl border border-zinc-800 rounded-none">
+                    <div className="bg-zinc-950 p-8 md:p-12 shadow-2xl border border-zinc-900 rounded-none">
                         <h3 className="text-3xl font-bold mb-2 uppercase tracking-wide text-white">Get a Quote</h3>
-                        <p className="text-gray-500 mb-8">Start your partnership with us today.</p>
+                        <p className="text-zinc-400 mb-8">Start your partnership with us today.</p>
 
                         <form className="space-y-6">
                             <div>

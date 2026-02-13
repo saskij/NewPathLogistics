@@ -4,6 +4,10 @@ export default function WhyChooseUs() {
     return (
         <section className="bg-zinc-950 py-24 relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
+                <div className="text-center mb-20">
+                    <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-white mb-4">Why Choose Us</h2>
+                    <div className="w-24 h-1 bg-white mx-auto"></div>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
 
                     {/* Feature 1 */}
