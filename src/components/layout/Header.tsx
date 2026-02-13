@@ -17,7 +17,7 @@ export default function Header() {
         <header className="fixed w-full top-0 z-50 bg-[#121212]/95 backdrop-blur-md border-b border-white/5 h-20">
             <div className="container mx-auto px-4 h-full flex justify-between items-center">
                 <Link href="/" className="relative z-50">
-                    <div className="relative h-32 w-64 -mt-4">
+                    <div className="relative h-48 w-96 mt-6">
                         <Image
                             src={logoImg}
                             alt="New Path Logistics Logo"
