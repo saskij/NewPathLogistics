@@ -3,17 +3,17 @@ import { TrendingUp, RefreshCw, ShieldCheck } from "lucide-react";
 const advantages = [
     {
         title: "Merit & Performance",
-        description: "Мы ценим результаты, а не ярлыки.",
+        description: "We value results, not labels.",
         icon: TrendingUp,
     },
     {
         title: "Second Chances",
-        description: "Мы верим в людей и даем возможность зарабатывать вне зависимости от бэкграунда.",
+        description: "We believe in people and provide earning opportunities regardless of background.",
         icon: RefreshCw,
     },
     {
         title: "Professionalism",
-        description: "Культура ответственности и честности.",
+        description: "A culture of accountability and integrity.",
         icon: ShieldCheck,
     },
 ];
