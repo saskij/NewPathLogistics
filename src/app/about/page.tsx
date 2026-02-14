@@ -1,7 +1,7 @@
 
 import { ShieldCheck, TrendingUp, Users, MapPin } from "lucide-react";
 import Image from "next/image";
-import heroNew from "../../../public/hero-new.jpg";
+import aboutHero from "../../../public/About us-hero.jpg";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 
 export default function AboutPage() {
@@ -12,7 +12,7 @@ export default function AboutPage() {
             <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden py-24">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src={heroNew}
+                        src={aboutHero}
                         alt="New Path Logistics Highway"
                         fill
                         className="object-cover object-center grayscale brightness-[0.4] contrast-[1.2]"
