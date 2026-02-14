@@ -37,8 +37,8 @@ export default function ServicesPage() {
             {services.map((service, index) => {
                 const isEven = index % 2 === 0;
                 const Icon = service.icon;
-                // Alternating images for visual variety
-                const ServiceImage = index % 2 === 0 ? heroNew : joinFleet;
+                // Use the specific image defined in data, fallback to heroNew if not present
+                const ServiceImage = service.image || heroNew;
 
                 return (
                     <section key={service.id} className="py-20 border-b border-zinc-200">

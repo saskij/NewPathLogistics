@@ -36,13 +36,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     }
 
     const Icon = service.icon;
+    // Use service specific image if available, else default hero
+    const HeroImage = service.image || heroServices;
 
     return (
         <main className="bg-zinc-50 min-h-screen pt-16">
             {/* Hero Section - Hero Image */}
             <section className="relative py-32 overflow-hidden">
                 <Image
-                    src={heroServices}
+                    src={HeroImage}
                     alt="Service Hero"
                     fill
                     className="object-cover brightness-[0.3]"
