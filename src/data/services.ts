@@ -3,6 +3,7 @@ import { StaticImageData } from "next/image";
 import heroNew from "../../public/hero-new.jpg";
 import joinFleet from "../../public/Join our fleet.jpg";
 import nationwideCard from "../../public/NATIONWIDE TRUCKING-card.jpg";
+import logisticsCard from "../../public/LOGISTICS MANAGEMENT-card.jpg";
 
 export interface Service {
     id: string;
@@ -58,7 +59,7 @@ export const services: Service[] = [
         title: "Logistics Management",
         shortDescription: "Strategic route planning, tracking, and customs/land logistics support for efficient delivery.",
         icon: Globe,
-        image: heroNew,
+        image: logisticsCard,
         fullDescription: [
             "Effective Logistics Management is about precision and planning. At New Path Logistics, we take a holistic approach to managing the flow of your goods. Our services encompass everything from initial route planning to final delivery confirmation, ensuring a seamless process from end to end.",
             "We utilize advanced routing software to minimize transit times and fuel consumption, translating to faster deliveries and lower costs for you. Our team also manages the regulatory aspects of land logistics, ensuring compliance with all state and federal transportation laws.",
