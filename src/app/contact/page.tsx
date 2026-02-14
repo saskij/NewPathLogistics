@@ -2,6 +2,7 @@
 import { Phone, Mail, MapPin, Send, MessageSquare } from "lucide-react";
 import Image from "next/image";
 import heroNew from "../../../public/hero-new.jpg";
+import ScrollAnimation from "@/components/ui/ScrollAnimation";
 
 export default function ContactPage() {
     return (
@@ -40,13 +41,15 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                 </div>
 
                 <div className="container mx-auto px-4 text-center relative z-10">
-                    <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 text-white">
-                        Start Your Partnership
-                    </h1>
-                    <div className="w-24 h-1 bg-white mx-auto mt-6"></div>
-                    <p className="mt-6 text-xl text-gray-400 max-w-2xl mx-auto">
-                        Ready to move forward? Let's connect.
-                    </p>
+                    <ScrollAnimation>
+                        <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 text-white">
+                            Start Your Partnership
+                        </h1>
+                        <div className="w-24 h-1 bg-white mx-auto mt-6"></div>
+                        <p className="mt-6 text-xl text-gray-400 max-w-2xl mx-auto">
+                            Ready to move forward? Let's connect.
+                        </p>
+                    </ScrollAnimation>
                 </div>
             </section>
 
@@ -56,7 +59,7 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
                         {/* Contact Info Side */}
-                        <div>
+                        <ScrollAnimation>
                             <h2 className="text-3xl font-bold uppercase tracking-wide mb-8 text-zinc-900">Get In Touch</h2>
                             <p className="text-xl text-zinc-600 font-light leading-relaxed mb-12">
                                 Whether you're a shipper looking for reliable capacity or a driver seeking a better career, we're here to answer your questions.
@@ -105,11 +108,10 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollAnimation>
 
                         {/* Form Side */}
-                        <div className="bg-white p-8 md:p-12 rounded-xl border border-zinc-200 shadow-xl relative overflow-hidden">
-
+                        <ScrollAnimation className="bg-white p-8 md:p-12 rounded-xl border border-zinc-200 shadow-xl relative overflow-hidden">
                             <h3 className="text-2xl font-bold mb-2 uppercase tracking-wide text-zinc-900 relative z-10 flex items-center gap-3">
                                 <MessageSquare className="w-6 h-6" />
                                 Send a Message
@@ -179,7 +181,7 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                                     <Send className="w-5 h-5" />
                                 </button>
                             </form>
-                        </div>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </section>

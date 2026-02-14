@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Phone, Mail, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { Menu, X, Phone, PhoneCall, Mail, Facebook, Linkedin, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../../../public/logo.png';
 
@@ -117,13 +117,26 @@ export default function Header() {
                                 </Link>
                             </li>
                         </ul>
-                        <a
+                        <motion.a
                             href="tel:5551234567"
-                            className="ml-8 border border-white/80 text-white px-4 py-1.5 flex items-center gap-2 font-bold uppercase tracking-wider text-xs hover:bg-white hover:text-black transition-all rounded-sm whitespace-nowrap"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.5, duration: 0.4 }}
+                            className="ml-8 border-[0.5px] border-zinc-700 text-zinc-300 px-5 py-2 flex items-center gap-3 rounded-sm hover:border-white hover:text-white hover:scale-105 transition-all duration-300 group bg-transparent"
                         >
-                            <Phone className="w-3 h-3 md:w-4 md:h-4 text-white hover:text-black transition-colors" />
-                            <span>(555) 123-4567</span>
-                        </a>
+                            <PhoneCall className="w-4 h-4 text-red-600" />
+                            <span className="font-bold tracking-widest text-xs uppercase">CALL US</span>
+
+                            <div className="flex items-center gap-2 pl-2 border-l border-zinc-800">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+                                </span>
+                                <span className="font-mono text-xs tracking-wider group-hover:text-white transition-colors">
+                                    (555) 123-4567
+                                </span>
+                            </div>
+                        </motion.a>
                     </nav>
 
                     {/* Mobile Menu Toggle (Visible only when menu is closed) */}

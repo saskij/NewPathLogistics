@@ -9,6 +9,8 @@ import heroBg from "../../public/hero-new.jpg";
 
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 
+import ScrollAnimation from "@/components/ui/ScrollAnimation";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-anthracite text-white flex flex-col">
@@ -31,52 +33,66 @@ export default function Home() {
 
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-start pt-48 pb-20">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-[0.05em] mb-8 max-w-5xl leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-sans">
-            Nationwide<br />
-            <span className="text-zinc-200">Trucking</span>
-          </h1>
+          <ScrollAnimation>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-[0.05em] mb-8 max-w-5xl leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-sans">
+              Nationwide<br />
+              <span className="text-zinc-200">Trucking</span>
+            </h1>
 
-          <div className="max-w-2xl mb-12 pl-1 border-l-8 border-white">
-            <p className="text-xl md:text-2xl text-gray-100 font-medium leading-relaxed pl-8 drop-shadow-md">
-              At New Path Logistics, success is earned through skill and performance.
-              Real opportunities based on merit.
-            </p>
-          </div>
+            <div className="max-w-2xl mb-12 pl-1 border-l-8 border-white">
+              <p className="text-xl md:text-2xl text-gray-100 font-medium leading-relaxed pl-8 drop-shadow-md">
+                At New Path Logistics, success is earned through skill and performance.
+                Real opportunities based on merit.
+              </p>
+            </div>
 
-          <div className="flex flex-col sm:flex-row gap-6">
-            <Link
-              href="/contact"
-              className="px-6 py-3 bg-white text-black text-sm font-bold uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 rounded-sm"
-            >
-              Get a Quote
-            </Link>
-            <Link
-              href="/careers"
-              className="px-5 py-2.5 bg-transparent border-2 border-white text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm flex items-center"
-            >
-              Apply to Drive
-            </Link>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-6">
+              <Link
+                href="/contact"
+                className="px-6 py-3 bg-white text-black text-sm font-bold uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 rounded-sm"
+              >
+                Get a Quote
+              </Link>
+              <Link
+                href="/careers"
+                className="px-5 py-2.5 bg-transparent border-2 border-white text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm flex items-center"
+              >
+                Apply to Drive
+              </Link>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Services Section */}
-      <Services />
+      <ScrollAnimation>
+        <Services />
+      </ScrollAnimation>
 
       {/* Why Choose Us Section */}
-      <WhyChooseUs />
+      <ScrollAnimation>
+        <WhyChooseUs />
+      </ScrollAnimation>
 
       {/* Why Drive Section */}
-      <WhyDrive />
+      <ScrollAnimation>
+        <WhyDrive />
+      </ScrollAnimation>
 
       {/* Advantage Section */}
-      <Advantage />
+      <ScrollAnimation>
+        <Advantage />
+      </ScrollAnimation>
 
       {/* Careers Section */}
-      <Careers />
+      <ScrollAnimation>
+        <Careers />
+      </ScrollAnimation>
 
       {/* About & Contact Section */}
-      <AboutContact />
+      <ScrollAnimation>
+        <AboutContact />
+      </ScrollAnimation>
     </main>
   );
 }
