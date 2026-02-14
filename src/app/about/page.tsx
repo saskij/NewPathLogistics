@@ -15,11 +15,10 @@ export default function AboutPage() {
                         src={aboutHero}
                         alt="New Path Logistics Highway"
                         fill
-                        className="object-cover object-center grayscale brightness-[0.4] contrast-[1.2]"
+                        className="object-cover object-center brightness-50"
                         priority
                     />
-                    <div className="absolute inset-0 bg-black/60 mix-blend-multiply" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/60" />
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10 text-center max-w-5xl">
