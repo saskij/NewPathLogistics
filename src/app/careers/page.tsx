@@ -1,7 +1,7 @@
 
 import { Banknote, Award, Clock, Truck, ShieldCheck, CheckCircle, Send } from "lucide-react";
 import Image from "next/image";
-import driverFleet from "../../../public/driver-fleet.jpg";
+import careersHero from "../../../public/CAREERS-hero.jpg";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 
 export default function CareersPage() {
@@ -11,7 +11,7 @@ export default function CareersPage() {
             <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-zinc-950">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src={driverFleet}
+                        src={careersHero}
                         alt="New Path Logistics Flight"
                         fill
                         className="object-cover object-center brightness-50"
