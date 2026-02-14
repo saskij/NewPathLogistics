@@ -1,37 +1,6 @@
-import { Truck, Package, Globe, Warehouse, MapPin, Shield } from "lucide-react";
-
-const services = [
-    {
-        title: "Nationwide Trucking",
-        description: "Reliable long-haul transport across all 50 states. Full Truckload (FTL) and Less-Than-Truckload (LTL) services.",
-        icon: Truck,
-    },
-    {
-        title: "Freight Solutions",
-        description: "Comprehensive freight management, including distribution strategies and supply chain optimization.",
-        icon: Package,
-    },
-    {
-        title: "Logistics Management",
-        description: "Strategic route planning, tracking, and customs/land logistics support for efficient delivery.",
-        icon: Globe,
-    },
-    {
-        title: "Warehousing",
-        description: "Secure storage solutions with inventory management, cross-docking, and distribution services.",
-        icon: Warehouse,
-    },
-    {
-        title: "Last Mile Delivery",
-        description: "Prompt and professional delivery to the final destination, ensuring customer satisfaction.",
-        icon: MapPin,
-    },
-    {
-        title: "Specialized Transport",
-        description: "Handling of oversized, hazardous, or high-value cargo with specialized equipment and care.",
-        icon: Shield,
-    },
-];
+import { services } from "@/data/services";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Services() {
     return (
@@ -55,11 +24,14 @@ export default function Services() {
                                 </div>
                                 <h3 className="text-xl font-bold mb-4 uppercase tracking-wide text-zinc-900">{service.title}</h3>
                                 <p className="text-zinc-600 mb-8 flex-grow leading-relaxed">
-                                    {service.description}
+                                    {service.shortDescription}
                                 </p>
-                                <button className="h-12 px-8 border border-zinc-300 text-zinc-900 text-sm font-bold uppercase tracking-wider rounded hover:bg-zinc-900 hover:text-white transition-all duration-300 flex items-center justify-center">
-                                    Learn More
-                                </button>
+                                <Link
+                                    href={`/services/${service.id}`}
+                                    className="h-12 px-8 border border-zinc-300 text-zinc-900 text-sm font-bold uppercase tracking-wider rounded hover:bg-zinc-900 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                                >
+                                    Learn More <ArrowRight size={16} />
+                                </Link>
                             </div>
                         );
                     })}
