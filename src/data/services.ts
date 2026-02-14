@@ -4,6 +4,7 @@ import heroNew from "../../public/hero-new.jpg";
 import joinFleet from "../../public/Join our fleet.jpg";
 import nationwideCard from "../../public/NATIONWIDE TRUCKING-card.jpg";
 import logisticsCard from "../../public/LOGISTICS MANAGEMENT-card.jpg";
+import lastMileCard from "../../public/LAST MILE DELIVERY-card.jpg";
 
 export interface Service {
     id: string;
@@ -78,7 +79,7 @@ export const services: Service[] = [
         title: "Last Mile Delivery",
         shortDescription: "Prompt and professional delivery to the final destination, ensuring customer satisfaction.",
         icon: MapPin,
-        image: heroNew,
+        image: lastMileCard,
         fullDescription: [
             "The final leg of the journey is often the most critical. Our Last Mile Delivery service ensures that your products reach their ultimate destination prompt and professionally. We understand that our drivers are often the face of your brand to your customers, and we take that responsibility seriously.",
             "We offer a range of last-mile solutions, from curbside drop-off to white-glove inside delivery. Our technology allows customers to track their deliveries in real-time and receive automated updates, enhancing the overall customer experience.",
