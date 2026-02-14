@@ -1,6 +1,7 @@
 
 import { Map, Package, Route, ArrowRight, ShieldCheck } from "lucide-react";
 import Image from "next/image";
+import heroServices from "../../../public/hero-services.jpg";
 import heroNew from "../../../public/hero-new.jpg";
 import joinFleet from "../../../public/Join our fleet.jpg";
 import Link from "next/link";
@@ -10,15 +11,22 @@ export default function ServicesPage() {
     return (
         <div className="bg-zinc-50 text-zinc-900 min-h-screen">
 
-            {/* Page Header (Dark Hero) */}
-            <section className="bg-zinc-950 py-24 border-b border-zinc-800">
-                <div className="container mx-auto px-4 text-center">
+            {/* Page Header (Hero with Image) */}
+            <section className="relative py-32 border-b border-zinc-800 overflow-hidden">
+                <Image
+                    src={heroServices}
+                    alt="Services Hero"
+                    fill
+                    className="object-cover brightness-[0.4]"
+                    priority
+                />
+                <div className="container mx-auto px-4 text-center relative z-10">
                     <ScrollAnimation>
                         <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 text-white">
                             Precision Logistics Solutions
                         </h1>
                         <div className="w-24 h-1 bg-white mx-auto mt-6"></div>
-                        <p className="mt-6 text-xl text-gray-400 max-w-2xl mx-auto">
+                        <p className="mt-6 text-xl text-gray-200 max-w-2xl mx-auto font-medium">
                             Delivering excellence, mile after mile.
                         </p>
                     </ScrollAnimation>

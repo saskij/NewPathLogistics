@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 import { Metadata } from 'next';
+import Image from 'next/image';
+import heroServices from '../../../../public/hero-services.jpg';
 
 // Generate static params for all services
 export async function generateStaticParams() {
@@ -37,12 +39,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
     return (
         <main className="bg-zinc-50 min-h-screen pt-16">
-            {/* Hero Section - Dark */}
-            <section className="bg-zinc-900 text-white py-24 relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20 z-0"></div>
+            {/* Hero Section - Hero Image */}
+            <section className="relative py-32 overflow-hidden">
+                <Image
+                    src={heroServices}
+                    alt="Service Hero"
+                    fill
+                    className="object-cover brightness-[0.3]"
+                    priority
+                />
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="mb-8">
-                        <Link href="/services" className="text-zinc-400 hover:text-white flex items-center gap-2 transition-colors text-sm font-medium uppercase tracking-wider">
+                        <Link href="/services" className="text-zinc-300 hover:text-white flex items-center gap-2 transition-colors text-sm font-medium uppercase tracking-wider">
                             <ArrowLeft size={16} /> Back to Services
                         </Link>
                     </div>
@@ -52,7 +60,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                         </div>
                         <div>
                             <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-white mb-2">{service.title}</h1>
-                            <p className="text-xl text-zinc-400 max-w-2xl">{service.shortDescription}</p>
+                            <p className="text-xl text-zinc-300 max-w-2xl font-medium">{service.shortDescription}</p>
                         </div>
                     </div>
                 </div>
