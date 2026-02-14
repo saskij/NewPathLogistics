@@ -1,11 +1,11 @@
-
-import { Map, Package, Route, ArrowRight, ShieldCheck } from "lucide-react";
+import { Map, Package, Route, ArrowRight, ShieldCheck, Truck, Globe, Warehouse, MapPin, Shield } from "lucide-react";
 import Image from "next/image";
 import heroServices from "../../../public/hero-services.jpg";
 import heroNew from "../../../public/hero-new.jpg";
 import joinFleet from "../../../public/Join our fleet.jpg";
 import Link from "next/link";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
+import { services } from "@/data/services";
 
 export default function ServicesPage() {
     return (
@@ -33,117 +33,61 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* Service Details - Unified Light Layout */}
-            {/* 1. Nationwide Trucking */}
-            <section className="py-20 border-b border-zinc-200">
-                <div className="container mx-auto px-4">
-                    <ScrollAnimation>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            <div className="order-2 lg:order-1">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="p-3 bg-zinc-100 rounded-lg">
-                                        <Map className="w-8 h-8 text-black" strokeWidth={1.5} />
-                                    </div>
-                                    <h2 className="text-3xl font-bold uppercase tracking-wide text-zinc-900">Nationwide Trucking</h2>
-                                </div>
-                                <div className="h-px w-full bg-zinc-200 mb-8"></div>
-                                <p className="text-zinc-600 text-lg leading-relaxed mb-6">
-                                    We provide comprehensive coverage across all 48 contiguous states. Our fleet is equipped to handle long-haul transport with the reliability and speed your business demands.
-                                </p>
-                                <ul className="space-y-4 mb-8">
-                                    <li className="flex items-center gap-3 text-zinc-600">
-                                        <ShieldCheck className="w-5 h-5 text-black" />
-                                        <span>OTR (Over-The-Road) Excellence</span>
-                                    </li>
-                                    <li className="flex items-center gap-3 text-zinc-600">
-                                        <ShieldCheck className="w-5 h-5 text-black" />
-                                        <span>Real-time Tracking & Updates</span>
-                                    </li>
-                                    <li className="flex items-center gap-3 text-zinc-600">
-                                        <ShieldCheck className="w-5 h-5 text-black" />
-                                        <span>Safety-First Protocols</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="order-1 lg:order-2 relative h-[400px] w-full rounded-sm overflow-hidden border border-zinc-200 shadow-sm">
-                                <Image
-                                    src={heroNew}
-                                    alt="Nationwide Trucking"
-                                    fill
-                                    className="object-cover hover:scale-105 transition-transform duration-700"
-                                />
-                            </div>
-                        </div>
-                    </ScrollAnimation>
-                </div>
-            </section>
+            {/* Service Details - Dynamic List */}
+            {services.map((service, index) => {
+                const isEven = index % 2 === 0;
+                const Icon = service.icon;
+                // Alternating images for visual variety
+                const ServiceImage = index % 2 === 0 ? heroNew : joinFleet;
 
-            {/* 2. Freight Solutions */}
-            <section className="py-20 border-b border-zinc-200">
-                <div className="container mx-auto px-4">
-                    <ScrollAnimation>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            <div className="order-1 relative h-[400px] w-full rounded-sm overflow-hidden border border-zinc-200 shadow-sm">
-                                <Image
-                                    src={joinFleet}
-                                    alt="Freight Solutions"
-                                    fill
-                                    className="object-cover brightness-[0.9] contrast-[1.1] hover:scale-105 transition-transform duration-700"
-                                />
-                            </div>
-                            <div className="order-2">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="p-3 bg-zinc-100 rounded-lg">
-                                        <Package className="w-8 h-8 text-black" strokeWidth={1.5} />
+                return (
+                    <section key={service.id} className="py-20 border-b border-zinc-200">
+                        <div className="container mx-auto px-4">
+                            <ScrollAnimation>
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                                    {/* Content Column */}
+                                    <div className={`order-2 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                                        <div className="flex items-center gap-4 mb-6">
+                                            <div className="p-3 bg-zinc-100 rounded-lg">
+                                                <Icon className="w-8 h-8 text-black" strokeWidth={1.5} />
+                                            </div>
+                                            <h2 className="text-3xl font-bold uppercase tracking-wide text-zinc-900">{service.title}</h2>
+                                        </div>
+                                        <div className="h-px w-full bg-zinc-200 mb-8"></div>
+                                        <p className="text-zinc-600 text-lg leading-relaxed mb-6">
+                                            {service.shortDescription}
+                                        </p>
+                                        <ul className="space-y-4 mb-8">
+                                            {service.benefits.slice(0, 3).map((benefit, i) => (
+                                                <li key={i} className="flex items-center gap-3 text-zinc-600">
+                                                    <ShieldCheck className="w-5 h-5 text-black" />
+                                                    <span>{benefit}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <Link
+                                            href={`/services/${service.id}`}
+                                            className="inline-flex items-center gap-2 text-red-600 font-bold uppercase tracking-wider hover:text-red-700 transition-colors group"
+                                        >
+                                            Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        </Link>
                                     </div>
-                                    <h2 className="text-3xl font-bold uppercase tracking-wide text-zinc-900">Freight Solutions</h2>
-                                </div>
-                                <div className="h-px w-full bg-zinc-200 mb-8"></div>
-                                <p className="text-zinc-600 text-lg leading-relaxed mb-6">
-                                    No two shipments are alike. We offer tailored freight solutions designed to meet the specific requirements of your cargo, timeline, and budget.
-                                </p>
-                                <p className="text-zinc-600 leading-relaxed mb-6">
-                                    From complex logistical challenges to standard shipments, our team approaches every job with a problem-solving mindset. We optimize routes and load planning to ensure maximum efficiency.
-                                </p>
-                            </div>
-                        </div>
-                    </ScrollAnimation>
-                </div>
-            </section>
 
-            {/* 3. Dedicated Runs */}
-            <section className="py-20 border-b border-zinc-200">
-                <div className="container mx-auto px-4">
-                    <ScrollAnimation>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            <div className="order-2 lg:order-1">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="p-3 bg-zinc-100 rounded-lg">
-                                        <Route className="w-8 h-8 text-black" strokeWidth={1.5} />
+                                    {/* Image Column */}
+                                    <div className={`order-1 ${isEven ? 'lg:order-2' : 'lg:order-1'} relative h-[400px] w-full rounded-sm overflow-hidden border border-zinc-200 shadow-sm`}>
+                                        <Image
+                                            src={ServiceImage}
+                                            alt={service.title}
+                                            fill
+                                            className="object-cover hover:scale-105 transition-transform duration-700"
+                                        />
                                     </div>
-                                    <h2 className="text-3xl font-bold uppercase tracking-wide text-zinc-900">Dedicated Runs</h2>
                                 </div>
-                                <div className="h-px w-full bg-zinc-200 mb-8"></div>
-                                <p className="text-zinc-600 text-lg leading-relaxed mb-6">
-                                    Consistency is key. Our dedicated runs provide stable and predictable schedules for both our drivers and our clients, ensuring your supply chain never misses a beat.
-                                </p>
-                                <p className="text-zinc-600 leading-relaxed">
-                                    We build long-term partnerships that allow for dedicated capacity, meaning your freight always has a truck ready when you need it.
-                                </p>
-                            </div>
-                            <div className="order-1 lg:order-2 relative h-[400px] w-full rounded-sm overflow-hidden border border-zinc-200 shadow-sm">
-                                {/* Reusing heroNew for now as requested to use existing assets */}
-                                <Image
-                                    src={heroNew}
-                                    alt="Dedicated Runs"
-                                    fill
-                                    className="object-cover hover:scale-105 transition-transform duration-700 grayscale-[50%]"
-                                />
-                            </div>
+                            </ScrollAnimation>
                         </div>
-                    </ScrollAnimation>
-                </div>
-            </section>
+                    </section>
+                );
+            })}
 
             {/* CTA Section */}
             <section className="bg-zinc-900 py-24 border-t border-zinc-800">
