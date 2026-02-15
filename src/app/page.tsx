@@ -24,7 +24,8 @@ export default function Home() {
             fill
             className="object-cover object-center brightness-[0.75] contrast-[1.2]"
             priority
-            quality={90}
+            quality={75}
+            sizes="100vw"
             placeholder="blur"
           />
           {/* Overlay */}
