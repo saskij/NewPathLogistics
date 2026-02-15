@@ -21,29 +21,29 @@ export default function TechSpecs() {
                     <div className="w-24 h-1 bg-red-600 mx-auto"></div>
                 </div>
 
-                <div className="bg-white rounded-sm shadow-xl overflow-hidden border border-zinc-100">
+                <div className="bg-white rounded-none shadow-2xl overflow-hidden border-t-4 border-red-600">
                     <LazyMotion features={domMax}>
                         <table className="w-full text-left border-collapse">
                             <thead>
-                                <tr className="bg-zinc-100 text-zinc-500 text-sm uppercase tracking-wider font-bold border-b border-zinc-200">
-                                    <th className="py-5 px-6 md:px-10 w-1/3">Category</th>
-                                    <th className="py-5 px-6 md:px-10 w-2/3">Feature</th>
+                                <tr className="bg-zinc-900 text-white text-sm uppercase tracking-widest font-bold">
+                                    <th className="py-6 px-6 md:px-10 w-1/3 border-r border-zinc-800">Category</th>
+                                    <th className="py-6 px-6 md:px-10 w-2/3">Feature</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {specs.map((spec, index) => (
                                     <m.tr
                                         key={index}
-                                        initial={{ opacity: 0, y: 10 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
                                         viewport={{ once: true, margin: "-50px" }}
-                                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                                        className="border-b border-zinc-100 last:border-none hover:bg-zinc-50 transition-colors even:bg-zinc-50/50"
+                                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                                        className="border-b border-zinc-100 last:border-none hover:bg-zinc-50 transition-colors group"
                                     >
-                                        <td className="py-6 px-6 md:px-10 font-bold text-zinc-900 align-top">
+                                        <td className="py-6 px-6 md:px-10 font-bold text-zinc-900 align-top uppercase tracking-wide text-sm border-r border-zinc-100 group-hover:text-red-600 transition-colors">
                                             {spec.category}
                                         </td>
-                                        <td className="py-6 px-6 md:px-10 text-zinc-600 leading-relaxed align-top">
+                                        <td className="py-6 px-6 md:px-10 text-zinc-600 leading-relaxed align-top group-hover:text-zinc-900 transition-colors">
                                             {spec.value}
                                         </td>
                                     </m.tr>
