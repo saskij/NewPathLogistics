@@ -1,4 +1,5 @@
-import { Send } from "lucide-react";
+import Link from "next/link";
+import { Send, ArrowRight } from "lucide-react";
 
 export default function AboutContact() {
     return (
@@ -23,22 +24,28 @@ export default function AboutContact() {
                         <div className="space-y-8 text-zinc-700 font-light text-lg leading-relaxed">
                             <p>
                                 <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">Merit & Performance</strong>
-                                At New Path Logistics, we believe that success should be earned, not given. We have built a culture where hard work, skill, and dedication are the sole drivers of advancement. Your background doesn't define you here—your performance does.
+                                At New Path Logistics, we believe that success should be earned, not given. We have built a culture where hard work, skill, and dedication are the sole drivers of advancement.
                             </p>
 
                             <p>
                                 <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">Integrity in Motion</strong>
-                                We operate with absolute transparency and honesty. Whether it’s clear pricing for our clients or straightforward pay for our drivers, integrity is at the core of every mile we drive. We do what we say, every time.
+                                We operate with absolute transparency. Whether it’s clear pricing for our clients or straightforward pay for our drivers, integrity is at the core of every mile we drive.
                             </p>
 
-                            <p>
-                                <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">A Partnership</strong>
-                                We view our drivers and clients as partners. When you drive for New Path, you're not just a number; you're the backbone of our operation. We invest in top‐tier equipment and support systems to ensure you succeed on the road.
-                            </p>
+                            <div className="pt-4">
+                                <Link
+                                    href="/about"
+                                    className="inline-flex items-center gap-2 text-red-600 font-bold uppercase tracking-wider hover:text-red-700 transition-colors group"
+                                    aria-label="Read our full story about New Path Logistics"
+                                >
+                                    Read Our Full Story
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                            </div>
 
-                            <div className="pt-8 mt-8 border-t border-zinc-200">
+                            <div className="pt-8 mt-4 border-t border-zinc-200">
                                 <p className="text-sm font-bold uppercase tracking-widest text-zinc-500">Headquarters</p>
-                                <p className="text-xl text-zinc-900 font-bold mt-2">Proudly based in Meridian, Idaho.</p>
+                                <p className="text-xl text-zinc-900 font-bold mt-2">Proudly based in <span className="text-red-600">Meridian, Idaho</span>.</p>
                             </div>
                         </div>
                     </div>

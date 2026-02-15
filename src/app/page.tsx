@@ -10,6 +10,7 @@ import heroBg from "../../public/hero-new.jpg";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -46,32 +47,36 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="container mx-auto px-4 relative z-10 flex flex-col items-start pt-48 pb-20">
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
           <ScrollAnimation>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-[0.05em] mb-8 max-w-5xl leading-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-sans">
-              Nationwide<br />
-              <span className="text-zinc-200">Trucking</span>
+            <span className="block text-red-500 font-bold tracking-[0.2em] uppercase mb-4 text-sm md:text-base bg-black/50 backdrop-blur-sm py-1 px-3 rounded-full inline-block mx-auto border border-red-500/30">
+              Nationwide Trucking
+            </span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight drop-shadow-xl tracking-wide">
+              SUCCESS DRIVEN BY <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
+                PERFORMANCE
+              </span>
+              , NOT LABELS.
             </h1>
-
-            <div className="max-w-2xl mb-12 pl-1 border-l-8 border-white">
-              <p className="text-xl md:text-2xl text-gray-100 font-medium leading-relaxed pl-8 drop-shadow-md">
-                At New Path Logistics, success is earned through skill and performance.
-                Real opportunities based on merit.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Link
-                href="/contact"
-                className="px-6 py-3 bg-white text-black text-sm font-bold uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 rounded-sm"
-              >
-                Get a Quote
-              </Link>
+            <p className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto mb-10 leading-relaxed font-light drop-shadow-md">
+              Reliable freight solutions and career opportunities for drivers who value respect and results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/careers"
-                className="px-5 py-2.5 bg-transparent border-2 border-white text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm flex items-center"
+                className="bg-red-600 text-white px-8 py-4 rounded-sm font-bold hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2 group ring-2 ring-red-600 ring-offset-2 ring-offset-black/50"
+                aria-label="Apply for a driving job"
               >
-                Apply to Drive
+                JOIN OUR FLEET
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/services"
+                className="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-sm font-bold hover:bg-white/20 transition-all flex items-center gap-2"
+                aria-label="Learn more about our freight services"
+              >
+                FREIGHT SOLUTIONS
               </Link>
             </div>
           </ScrollAnimation>
@@ -93,10 +98,6 @@ export default function Home() {
         <WhyDrive />
       </ScrollAnimation>
 
-      {/* Advantage Section */}
-      <ScrollAnimation>
-        <Advantage />
-      </ScrollAnimation>
 
       {/* Careers Section */}
       <ScrollAnimation>

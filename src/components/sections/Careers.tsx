@@ -43,6 +43,7 @@ export default function Careers() {
                         <Link
                             href="/careers"
                             className="inline-block px-10 py-5 bg-white text-black text-lg font-bold uppercase tracking-wider hover:bg-gray-200 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                            aria-label="Start your driver application"
                         >
                             Start Your Application
                         </Link>

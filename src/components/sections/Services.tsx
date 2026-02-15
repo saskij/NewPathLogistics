@@ -44,6 +44,7 @@ export default function Services() {
                                     <Link
                                         href={`/services/${service.id}`}
                                         className="h-12 w-full px-8 border border-zinc-300 text-zinc-900 text-sm font-bold uppercase tracking-wider rounded hover:bg-zinc-900 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                                        aria-label={`Learn more about ${service.title}`}
                                     >
                                         Learn More <ArrowRight size={16} />
                                     </Link>

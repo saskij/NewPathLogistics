@@ -43,14 +43,12 @@ export default function Footer() {
                                             </p>
                                         </div>
                                     </li>
-                                    <li className="flex items-start gap-4 group">
-                                        <MapPin className="w-5 h-5 text-red-600 mt-1" />
-                                        <div>
-                                            <p className="text-base text-zinc-300 leading-relaxed">
-                                                Based in Meridian, Idaho<br />
-                                                Serving All 48 States
-                                            </p>
-                                        </div>
+                                    <li className="flex items-start">
+                                        <MapPin className="w-5 h-5 text-red-500 mt-1 mr-3 flex-shrink-0" />
+                                        <span className="text-zinc-400">
+                                            Based in <span className="text-white font-bold">Meridian, Idaho</span><br />
+                                            Operating Nationwide
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
