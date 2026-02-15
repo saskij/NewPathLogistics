@@ -94,6 +94,14 @@ export default function Header() {
                             </li>
                             <li>
                                 <Link
+                                    href="/equipment"
+                                    className={`transition-colors ${pathname === '/equipment' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                >
+                                    Equipment
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href="/careers"
                                     className={`transition-colors ${pathname === '/careers' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
                                 >
@@ -201,7 +209,7 @@ export default function Header() {
                                     </a>
                                 </motion.li>
 
-                                {['Home', 'Services', 'Careers', 'About', 'Contact'].map((item, index) => {
+                                {['Home', 'Services', 'Equipment', 'Careers', 'About', 'Contact'].map((item, index) => {
                                     const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`;
                                     const isActive = pathname === path;
                                     return (
