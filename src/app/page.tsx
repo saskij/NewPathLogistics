@@ -34,7 +34,7 @@ export default function Home() {
               type="image/webp"
             />
             <img
-              src={heroBg.src}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new.jpg`}
               alt="New Path Logistics Truck on Highway"
               className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.75] contrast-[1.2]"
               fetchPriority="high"
