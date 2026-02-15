@@ -22,19 +22,19 @@ export default function Home() {
           <picture>
             <source
               media="(max-width: 640px)"
-              srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new-mobile.webp`}
+              srcSet={`${process.env.NODE_ENV === 'production' ? '/NewPathLogistics' : ''}/hero-new-mobile.webp?v=2`}
               type="image/webp"
             />
             <source
               media="(max-width: 640px)"
-              srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new-mobile.jpg`}
+              srcSet={`${process.env.NODE_ENV === 'production' ? '/NewPathLogistics' : ''}/hero-new-mobile.jpg?v=2`}
             />
             <source
-              srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new.webp`}
+              srcSet={`${process.env.NODE_ENV === 'production' ? '/NewPathLogistics' : ''}/hero-new.webp?v=2`}
               type="image/webp"
             />
             <img
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new.jpg`}
+              src={`${process.env.NODE_ENV === 'production' ? '/NewPathLogistics' : ''}/hero-new.jpg?v=2`}
               alt="New Path Logistics Truck on Highway"
               className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.75] contrast-[1.2]"
               fetchPriority="high"
