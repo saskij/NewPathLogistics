@@ -10,8 +10,20 @@ export default function ContactPage() {
 
             {/* Hero / Header */}
             <section className="relative py-24 border-b border-zinc-800 bg-black overflow-hidden">
+                {/* Hero Image */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src={contactHero}
+                        alt="New Path Logistics Contact"
+                        fill
+                        className="object-cover object-center brightness-[0.4]"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90" />
+                </div>
+
                 {/* Abstract background map pattern */}
-                <div className="absolute inset-0 opacity-20 pointer-events-none">
+                <div className="absolute inset-0 opacity-20 pointer-events-none z-10">
                     <svg viewBox="0 0 950 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full stroke-zinc-600 stroke-[1]">
                         <path d="M936.8,127.3c-2.4-7.3-8.6-12.7-16-14.7c-9.6-2.6-19.4-1.6-28.7,2.1c-6.6,2.6-13.6,1.4-19.2-3.1
 c-7.3-5.9-16.7-7-25-2.8c-2,1-4.2,0.9-6.1-0.2c-5.9-3.3-12.3-5.2-19-6.3c-3.1-0.5-5.9-2.3-7.5-5c-3.3-5.5-8.3-9.5-14.5-11.4
