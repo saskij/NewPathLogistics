@@ -74,7 +74,7 @@ export default function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex h-20 items-center ml-12">
+                    <nav className="hidden xl:flex h-20 items-center ml-12">
                         <ul className="flex space-x-6 lg:space-x-10 text-sm font-bold uppercase tracking-wide">
                             <li>
                                 <Link
@@ -141,7 +141,7 @@ export default function Header() {
 
                     {/* Mobile Menu Toggle (Visible only when menu is closed) */}
                     <button
-                        className={`md:hidden relative z-50 h-20 flex items-center transition-colors duration-300 ${isMenuOpen ? 'opacity-0 pointer-events-none' : 'text-white'}`}
+                        className={`xl:hidden relative z-50 h-20 flex items-center transition-colors duration-300 ${isMenuOpen ? 'opacity-0 pointer-events-none' : 'text-white'}`}
                         onClick={toggleMenu}
                         aria-label="Open menu"
                     >
@@ -158,7 +158,7 @@ export default function Header() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
                         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 bg-zinc-950/90 backdrop-blur-xl z-[100] flex flex-col md:hidden"
+                        className="fixed inset-0 bg-zinc-950/90 backdrop-blur-xl z-[100] flex flex-col xl:hidden"
                     >
                         {/* Header Row: Logo & Close Button */}
                         <div className="container mx-auto px-4 h-24 flex justify-between items-center shrink-0 border-b border-white/10">
