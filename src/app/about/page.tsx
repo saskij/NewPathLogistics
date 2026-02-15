@@ -1,38 +1,17 @@
 
 import { ShieldCheck, TrendingUp, Users, MapPin } from "lucide-react";
-import Image from "next/image";
+import PageHero from "@/components/ui/PageHero";
 import aboutHero from "../../../public/About us-hero.jpg";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 
-export default function AboutPage() {
+export default function About() {
     return (
-        <div className="bg-anthracite text-white min-h-screen">
-
-            {/* Hero Section (Dark) */}
-            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src={aboutHero}
-                        alt="New Path Logistics Highway"
-                        fill
-                        className="object-cover object-center brightness-50"
-                        priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/60" />
-                </div>
-
-                <div className="container mx-auto px-4 relative z-10 text-center max-w-5xl">
-                    <ScrollAnimation>
-                        <h1 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-8 text-white drop-shadow-xl">
-                            Built on the Road
-                        </h1>
-                        <div className="w-24 h-1 bg-white mx-auto mb-10"></div>
-                        <p className="text-xl md:text-2xl text-zinc-300 font-light leading-relaxed mb-6 drop-shadow-md">
-                            Founded in Meridian, Idaho, by those who understand the true weight of every mile. We don’t just manage logistics; we respect the journey.
-                        </p>
-                    </ScrollAnimation>
-                </div>
-            </section>
+        <main className="bg-zinc-50 min-h-screen">
+            <PageHero
+                title="Our Journey, Your Trust"
+                subtitle="Built on a foundation of integrity, safety, and unwavering commitment to our drivers and partners."
+                backgroundImage={aboutHero}
+            />
 
             {/* Our Philosophy (Light) */}
             <section className="py-20 bg-zinc-50 text-zinc-900 border-t border-zinc-200">
@@ -105,7 +84,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-        </div>
+        </main>
     );
 }
 

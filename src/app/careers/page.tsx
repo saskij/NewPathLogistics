@@ -1,37 +1,25 @@
-
-import { Banknote, Award, Clock, Truck, ShieldCheck, CheckCircle, Send } from "lucide-react";
+import { Banknote, Award, Clock, Truck, ShieldCheck, CheckCircle, Send, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import PageHero from "@/components/ui/PageHero";
 import careersHero from "../../../public/CAREERS-hero.jpg";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 
-export default function CareersPage() {
+export default function Careers() {
     return (
-        <div className="bg-zinc-50 text-zinc-900 min-h-screen">
-            {/* Hero Section */}
-            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-zinc-950">
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src={careersHero}
-                        alt="New Path Logistics Flight"
-                        fill
-                        className="object-cover object-center brightness-50"
-                        priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/60" />
-                </div>
-
-                <div className="container mx-auto px-4 relative z-10 text-center">
-                    <ScrollAnimation>
-                        <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6 leading-tight text-white">
-                            A Fleet Built on Merit.<br />
-                            <span className="text-zinc-400">Not Labels.</span>
-                        </h1>
-                        <p className="text-xl md:text-3xl text-zinc-200 font-light max-w-3xl mx-auto">
-                            Real opportunities for real truckers.
-                        </p>
-                    </ScrollAnimation>
-                </div>
-            </section>
+        <main className="bg-zinc-50 min-h-screen">
+            <PageHero
+                title="Drive With The Best"
+                subtitle="Join a team that values your time, safety, and professional growth. High CPM, new equipment, and respect."
+                backgroundImage={careersHero}
+            >
+                <Link
+                    href="#application-form"
+                    className="bg-red-600 text-white px-8 py-4 rounded-sm font-bold text-lg hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
+                >
+                    APPLY NOW <ArrowRight className="w-5 h-5" />
+                </Link>
+            </PageHero>
 
             {/* Benefits Grid */}
             <section className="py-20 bg-zinc-50 border-b border-zinc-200">
@@ -208,6 +196,6 @@ export default function CareersPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     );
 }

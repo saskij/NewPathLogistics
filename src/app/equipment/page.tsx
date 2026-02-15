@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Sofa, Monitor, Thermometer, ShieldCheck, Wrench, Leaf, ArrowRight } from "lucide-react";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import TechSpecs from "@/components/sections/TechSpecs";
+import PageHero from "@/components/ui/PageHero";
 
 import driverFleet from "../../../public/driver-fleet.jpg"; // Using driver-fleet as base, will have overlay
 import equipmentImg from "../../../public/hero-services.jpg";
@@ -16,36 +17,11 @@ export default function EquipmentPage() {
     return (
         <main className="bg-zinc-950 text-white min-h-screen">
 
-            {/* 1. Hero Section */}
-            <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src={driverFleet}
-                        alt="New Path Logistics Fleet - Peterbilt 2024"
-                        fill
-                        className="object-cover"
-                        priority
-                        sizes="100vw"
-                    />
-                    {/* Gradient Overlay: Deep Black to Transparent */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/80 via-transparent to-transparent" />
-                </div>
-
-                <div className="container mx-auto px-4 relative z-10 text-center max-w-5xl">
-                    <ScrollAnimation>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-8 leading-none drop-shadow-2xl">
-                            Top-Tier Equipment <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-                                For Top-Tier Drivers
-                            </span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-zinc-300 font-light leading-relaxed max-w-3xl mx-auto drop-shadow-lg border-l-4 border-red-600 pl-6 text-left md:text-center md:border-none md:pl-0">
-                            We operate a modern fleet of 2024 Peterbilt trucks, designed for maximum reliability and driver comfort.
-                        </p>
-                    </ScrollAnimation>
-                </div>
-            </section>
+            <PageHero
+                title="Top-Tier Equipment"
+                subtitle="We operate a modern fleet of 2024 Peterbilt trucks, designed for maximum reliability and driver comfort."
+                backgroundImage={driverFleet}
+            />
 
             {/* 2. The Peterbilt Advantage (bg-zinc-50) */}
             <section className="py-24 bg-zinc-50 text-zinc-900 border-b border-zinc-200">

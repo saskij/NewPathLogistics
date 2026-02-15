@@ -6,32 +6,17 @@ import joinFleet from "../../../public/Join our fleet.jpg";
 import Link from "next/link";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import { services } from "@/data/services";
+import PageHero from "@/components/ui/PageHero";
 
 export default function ServicesPage() {
     return (
-        <div className="bg-zinc-50 text-zinc-900 min-h-screen">
+        <main className="bg-zinc-50 text-zinc-900 min-h-screen">
 
-            {/* Page Header (Hero with Image) */}
-            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center border-b border-zinc-800 overflow-hidden">
-                <Image
-                    src={heroServices}
-                    alt="Services Hero"
-                    fill
-                    className="object-cover brightness-[0.4]"
-                    priority
-                />
-                <div className="container mx-auto px-4 text-center relative z-10">
-                    <ScrollAnimation>
-                        <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 text-white">
-                            Precision Logistics Solutions
-                        </h1>
-                        <div className="w-24 h-1 bg-white mx-auto mt-6"></div>
-                        <p className="mt-6 text-xl text-gray-200 max-w-2xl mx-auto font-medium">
-                            Delivering excellence, mile after mile.
-                        </p>
-                    </ScrollAnimation>
-                </div>
-            </section>
+            <PageHero
+                title="Comprehensive Logistics"
+                subtitle="From coast-to-coast trucking to last-mile delivery, we provide the solutions that keep your business moving forward."
+                backgroundImage={heroServices}
+            />
 
             {/* Service Details - Dynamic List */}
             {services.map((service, index) => {
@@ -110,6 +95,6 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-        </div>
+        </main>
     );
 }
