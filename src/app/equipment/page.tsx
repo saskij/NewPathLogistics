@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sofa, Monitor, Thermometer, ShieldCheck, Wrench, Leaf, ArrowRight } from "lucide-react";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
-import driverFleet from "../../../public/driver-fleet.jpg";
+import ScrollAnimation from "@/components/ui/ScrollAnimation";
+import driverFleet from "../../../public/NATIONWIDE TRUCKING-card.jpg";
 import equipmentImg from "../../../public/hero-services.jpg"; // Using as placeholder for truck detail
 
 export const metadata = {
