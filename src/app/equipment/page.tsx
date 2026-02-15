@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sofa, Monitor, Thermometer, ShieldCheck, Wrench, Leaf, ArrowRight } from "lucide-react";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
+import TechSpecs from "@/components/sections/TechSpecs";
 
 import driverFleet from "../../../public/NATIONWIDE TRUCKING-card.jpg";
 import equipmentImg from "../../../public/hero-services.jpg"; // Using as placeholder for truck detail
@@ -95,6 +96,9 @@ export default function EquipmentPage() {
                     </ScrollAnimation>
                 </div>
             </section>
+
+            {/* 2.5 Tech Specs */}
+            <TechSpecs />
 
             {/* 3. Comfort on the Road (bg-zinc-900) */}
             <section className="py-24 bg-zinc-900 text-white relative overflow-hidden">
