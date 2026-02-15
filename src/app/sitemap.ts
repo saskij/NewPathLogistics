@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://saskij.github.io/NewPathLogistics'; // Replace with your actual domain or deployment URL if different
 
