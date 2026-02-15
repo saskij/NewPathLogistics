@@ -12,7 +12,7 @@ export default function ServicesPage() {
         <div className="bg-zinc-50 text-zinc-900 min-h-screen">
 
             {/* Page Header (Hero with Image) */}
-            <section className="relative py-32 border-b border-zinc-800 overflow-hidden">
+            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center border-b border-zinc-800 overflow-hidden">
                 <Image
                     src={heroServices}
                     alt="Services Hero"

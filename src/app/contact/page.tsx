@@ -9,7 +9,7 @@ export default function ContactPage() {
         <div className="bg-zinc-50 text-zinc-900 min-h-screen">
 
             {/* Hero / Header */}
-            <section className="relative py-24 border-b border-zinc-800 bg-black overflow-hidden">
+            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center border-b border-zinc-800 bg-black overflow-hidden">
                 {/* Hero Image */}
                 <div className="absolute inset-0 z-0">
                     <Image

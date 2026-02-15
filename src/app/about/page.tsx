@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="bg-anthracite text-white min-h-screen">
 
             {/* Hero Section (Dark) */}
-            <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden py-24">
+            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src={aboutHero}
