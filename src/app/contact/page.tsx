@@ -1,7 +1,7 @@
 
 import { Phone, Mail, MapPin, Send, MessageSquare } from "lucide-react";
 import Image from "next/image";
-import heroNew from "../../../public/hero-new.jpg";
+import contactHero from "../../../public/CONTACT-hero.jpg";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 
 export default function ContactPage() {

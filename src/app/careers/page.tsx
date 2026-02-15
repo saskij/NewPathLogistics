@@ -118,9 +118,8 @@ export default function CareersPage() {
 
                         {/* Application Form */}
                         <div className="bg-white text-black p-8 md:p-12 rounded-lg shadow-xl border border-zinc-200 relative">
+                            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-zinc-800 via-zinc-600 to-zinc-800 overflow-hidden rounded-t-lg" />
                             <ScrollAnimation>
-                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-zinc-800 via-zinc-600 to-zinc-800" />
-
                                 <h3 className="text-3xl font-black uppercase tracking-tight mb-2 text-zinc-900">Join The Fleet</h3>
                                 <p className="text-zinc-600 mb-8 font-medium">Start your application today. No obligations.</p>
 
