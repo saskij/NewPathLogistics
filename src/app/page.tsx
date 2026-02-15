@@ -18,17 +18,27 @@ export default function Home() {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          {/* LCP Optimization: Using <picture> to force mobile image download */}
+          {/* LCP Optimization: WebP + Mobile Source + Native Priority */}
           <picture>
             <source
               media="(max-width: 640px)"
+              srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new-mobile.webp`}
+              type="image/webp"
+            />
+            <source
+              media="(max-width: 640px)"
               srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new-mobile.jpg`}
+            />
+            <source
+              srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/hero-new.webp`}
+              type="image/webp"
             />
             <img
               src={heroBg.src}
               alt="New Path Logistics Truck on Highway"
               className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.75] contrast-[1.2]"
-              fetchPriority="high" // Native Priority Hint
+              fetchPriority="high"
+              decoding="async"
             />
           </picture>
           {/* Overlay */}
