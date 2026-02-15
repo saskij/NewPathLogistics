@@ -18,6 +18,8 @@ export default function Footer() {
                                     src={logoImg}
                                     alt="New Path Logistics"
                                     fill
+                                    sizes="(max-width: 768px) 224px, 256px"
+                                    loading="lazy"
                                     className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2]"
                                 />
                             </Link>
@@ -79,6 +81,8 @@ export default function Footer() {
                                 src={mapImg}
                                 alt="Nationwide Coverage Map"
                                 fill
+                                sizes="(max-width: 768px) 100vw, 360px"
+                                loading="lazy"
                                 className="object-contain object-right opacity-80 group-hover:opacity-100 transition-opacity duration-500 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                             />
 

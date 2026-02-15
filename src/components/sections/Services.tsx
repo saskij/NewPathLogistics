@@ -21,11 +21,13 @@ export default function Services() {
                                 className="group bg-white border border-zinc-200 rounded-sm hover:border-zinc-900 transition-all duration-300 flex flex-col items-start hover:shadow-xl overflow-hidden"
                             >
                                 {service.image && (
-                                    <div className="relative w-full h-48 overflow-hidden">
+                                    <div className="relative w-full h-48 overflow-hidden bg-zinc-100">
                                         <Image
                                             src={service.image}
                                             alt={service.title}
                                             fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            loading="lazy"
                                             className="object-cover group-hover:scale-105 transition-transform duration-700"
                                         />
                                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300"></div>
