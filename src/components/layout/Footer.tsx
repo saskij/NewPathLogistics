@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
 import logoImg from '../../../public/logo.png';
 import mapImg from '../../../public/map.png';
 
@@ -93,27 +93,23 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-
-                    {/* Copyright & Links */}
-                    <div className="flex flex-col md:flex-row items-center gap-6 text-[10px] text-zinc-500 uppercase tracking-widest">
-                        <p>&copy; 2026 New Path Logistics.</p>
-                        <div className="flex gap-6">
-                            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-                            <a href="#" className="hover:text-white transition-colors">Terms</a>
-                        </div>
+                <div className="border-t border-zinc-800 mt-16 pt-8 text-zinc-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p>© {new Date().getFullYear()} New Path Logistics. All rights reserved.</p>
+                    <div className="flex space-x-6">
+                        <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
                     </div>
 
-                    {/* Social Media - Now at bottom */}
-                    <div className="flex gap-4">
+                    {/* Social Media */}
+                    <div className="flex gap-4 mt-4 md:mt-0">
                         <a href="#" className="p-2 text-zinc-400 hover:text-white transition-all duration-300 hover:scale-110">
                             <Facebook className="w-5 h-5" />
                         </a>
                         <a href="#" className="p-2 text-zinc-400 hover:text-white transition-all duration-300 hover:scale-110">
-                            <Twitter className="w-5 h-5" />
+                            <Linkedin className="w-5 h-5" />
                         </a>
                         <a href="#" className="p-2 text-zinc-400 hover:text-white transition-all duration-300 hover:scale-110">
-                            <Linkedin className="w-5 h-5" />
+                            <Instagram className="w-5 h-5" />
                         </a>
                     </div>
                 </div>
