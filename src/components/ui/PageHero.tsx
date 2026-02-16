@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 interface PageHeroProps {
     title: string;
     subtitle?: string;
+    bottomCaption?: string;
     backgroundImage: StaticImageData | string;
     children?: ReactNode;
     size?: 'medium' | 'large';
@@ -15,6 +16,7 @@ interface PageHeroProps {
 export default function PageHero({
     title,
     subtitle,
+    bottomCaption,
     backgroundImage,
     children,
     size = 'medium', // Default to medium (40vh) for internal pages
@@ -71,6 +73,16 @@ export default function PageHero({
                     )}
                 </ScrollAnimation>
             </div>
+
+            {/* Bottom Caption (DOT/MC Numbers) */}
+            {bottomCaption && (
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center">
+                    <div className="w-12 h-[1px] bg-white/40 mb-2"></div>
+                    <p className="text-[10px] font-semibold tracking-[0.2em] text-white/40 uppercase whitespace-nowrap">
+                        {bottomCaption}
+                    </p>
+                </div>
+            )}
         </section>
     );
 }

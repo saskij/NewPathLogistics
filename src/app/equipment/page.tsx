@@ -5,8 +5,9 @@ import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import TechSpecs from "@/components/sections/TechSpecs";
 import PageHero from "@/components/ui/PageHero";
 
-import driverFleet from "../../../public/driver-fleet.jpg"; // Using driver-fleet as base, will have overlay
+
 import equipmentImg from "../../../public/hero-services.jpg";
+import equipmentHero from "../../../public/EQUIPMENT-hero.jpg";
 
 export const metadata = {
     title: "Equipment | New Path Logistics",
@@ -20,7 +21,7 @@ export default function EquipmentPage() {
             <PageHero
                 title="Top-Tier Equipment"
                 subtitle="We operate a modern fleet of 2024 Peterbilt trucks, designed for maximum reliability and driver comfort."
-                backgroundImage={driverFleet}
+                backgroundImage={equipmentHero}
             />
 
             {/* 2. The Peterbilt Advantage (bg-zinc-50) */}
