@@ -164,7 +164,7 @@ export default function Header() {
                         </ul>
                         <a
                             href="tel:5551234567"
-                            className="ml-8 border-[0.5px] border-zinc-700 text-zinc-300 px-5 py-2 flex items-center gap-3 rounded-sm hover:border-white hover:text-white hover:scale-105 transition-all duration-300 group bg-transparent animate-in fade-in slide-in-from-right-4 duration-500"
+                            className="ml-8 border-[0.5px] border-zinc-700 text-zinc-300 px-5 py-2 flex items-center gap-3 rounded-sm hover:border-white hover:text-white hover:scale-105 transition-all duration-300 group bg-transparent animate-in fade-in slide-in-from-right-4 duration-500 whitespace-nowrap"
                             style={{ animationDelay: '500ms', animationFillMode: 'both' }}
                         >
                             <PhoneCall className="w-4 h-4 text-red-600" />
