@@ -69,7 +69,7 @@ export default function Header() {
                         className={`relative z-50 self-start transition-opacity duration-300 ${isLogoVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                         onClick={handleLogoClick}
                     >
-                        <div className={`relative transition-all duration-500 ease-in-out will-change-[height,width] h-20 w-40 ${isScrolled ? 'md:h-32 md:w-64' : 'md:h-48 md:w-96'} mt-0`}>
+                        <div className={`relative transition-all duration-500 ease-in-out will-change-[height,width] h-20 w-40 ${isScrolled ? 'md:h-24 md:w-48' : 'md:h-32 md:w-64'} mt-0`}>
                             <Image
                                 src={logoImg}
                                 alt="New Path Logistics Logo"
@@ -78,7 +78,6 @@ export default function Header() {
                                 className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2] drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] w-full h-full"
                                 priority
                                 sizes="(max-width: 768px) 160px, (max-width: 1200px) 256px, 384px"
-                                placeholder="blur"
                             />
                         </div>
                     </Link>
