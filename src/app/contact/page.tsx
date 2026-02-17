@@ -59,7 +59,7 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                         </h1>
                         <div className="w-24 h-1 bg-white mx-auto mt-6"></div>
                         <p className="mt-6 text-xl text-gray-400 max-w-2xl mx-auto">
-                            Ready to move forward? Let's connect.
+                            Ready to move forward? Let&apos;s connect.
                         </p>
                     </ScrollAnimation>
                 </div>
@@ -74,7 +74,7 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                         <ScrollAnimation>
                             <h2 className="text-3xl font-bold uppercase tracking-wide mb-8 text-zinc-900">Get In Touch</h2>
                             <p className="text-xl text-zinc-600 font-light leading-relaxed mb-12">
-                                Whether you're a shipper looking for reliable capacity or a driver seeking a better career, we're here to answer your questions.
+                                Whether you&apos;re a shipper looking for reliable capacity or a driver seeking a better career, we&apos;re here to answer your questions.
                             </p>
 
                             <div className="space-y-10">
@@ -163,7 +163,7 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                                 </div>
 
                                 <div>
-                                    <label htmlFor="subject" className="block text-sm font-bold uppercase tracking-wider mb-2 text-zinc-500">I'm interested in...</label>
+                                    <label htmlFor="subject" className="block text-sm font-bold uppercase tracking-wider mb-2 text-zinc-500">I&apos;m interested in...</label>
                                     <select
                                         id="subject"
                                         className="w-full bg-zinc-50 border border-zinc-200 px-4 py-4 text-zinc-900 focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors appearance-none rounded-lg"

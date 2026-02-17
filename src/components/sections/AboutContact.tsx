@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Send, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function AboutContact() {
     return (
@@ -29,7 +29,7 @@ export default function AboutContact() {
 
                             <p>
                                 <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">Integrity in Motion</strong>
-                                We operate with absolute transparency. Whether it’s clear pricing for our clients or straightforward pay for our drivers, integrity is at the core of every mile we drive.
+                                We operate with absolute transparency. Whether it&apos;s clear pricing for our clients or straightforward pay for our drivers, integrity is at the core of every mile we drive.
                             </p>
 
                             <div className="pt-4">

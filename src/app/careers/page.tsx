@@ -1,5 +1,5 @@
-import { Banknote, Award, Clock, Truck, ShieldCheck, CheckCircle, Send, ArrowRight } from "lucide-react";
-import Image from "next/image";
+import { Banknote, Award, Clock, Truck, Send, ArrowRight } from "lucide-react";
+
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import careersHero from "../../../public/CAREERS-hero.jpg";
@@ -85,20 +85,20 @@ export default function Careers() {
                         {/* Philosophy Text */}
                         <div className="lg:sticky lg:top-32">
                             <ScrollAnimation>
-                                <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight mb-8 text-zinc-900">The "New Path" Philosophy</h2>
+                                <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight mb-8 text-zinc-900">The &quot;New Path&quot; Philosophy</h2>
                                 <div className="w-24 h-1 bg-zinc-900 mb-10"></div>
 
                                 <div className="space-y-8 text-lg text-zinc-600 font-light leading-relaxed">
                                     <p>
-                                        At New Path Logistics, we don't look at your past—we look at your potential. We understand that in this industry, sometimes good drivers get a raw deal. Whether you're looking for a fresh start or simply a better home for your skills, we are here to provide that opportunity.
+                                        At New Path Logistics, we don&apos;t look at your past—we look at your potential. We understand that in this industry, sometimes good drivers get a raw deal. Whether you&apos;re looking for a fresh start or simply a better home for your skills, we are here to provide that opportunity.
                                     </p>
                                     <p>
                                         <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">Second Chances</strong>
-                                        We believe in second chances for professionals who are ready to work. If you have the aptitude and the drive, "labels" from previous carriers don't matter to us. Your performance on the road is the only metric that counts.
+                                        We believe in second chances for professionals who are ready to work. If you have the aptitude and the drive, &quot;labels&quot; from previous carriers don&apos;t matter to us. Your performance on the road is the only metric that counts.
                                     </p>
                                     <p>
                                         <strong className="text-zinc-900 font-bold block mb-2 text-xl uppercase tracking-wide">Merit-Based Culture</strong>
-                                        There are no politics here. You run the miles, you deliver safely, you get paid and respected. It's that simple. We stripped away the corporate noise to focus on what matters: moving freight and supporting the people who move it.
+                                        There are no politics here. You run the miles, you deliver safely, you get paid and respected. It&apos;s that simple. We stripped away the corporate noise to focus on what matters: moving freight and supporting the people who move it.
                                     </p>
                                 </div>
                             </ScrollAnimation>

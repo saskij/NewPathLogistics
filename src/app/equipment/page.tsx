@@ -90,7 +90,7 @@ export default function EquipmentPage() {
                                 Comfort on the <span className="text-red-600">Road</span>
                             </h2>
                             <p className="text-xl text-zinc-400 leading-relaxed max-w-2xl">
-                                Driver comfort is not a luxury; it's a necessity. Our cabs feature ergonomic seating, advanced climate control, and spacious sleeper berths to make life on the road feel like home.
+                                Driver comfort is not a luxury; it&apos;s a necessity. Our cabs feature ergonomic seating, advanced climate control, and spacious sleeper berths to make life on the road feel like home.
                             </p>
                         </div>
 

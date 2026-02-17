@@ -1,8 +1,8 @@
-import { Map, Package, Route, ArrowRight, ShieldCheck, Truck, Globe, Warehouse, MapPin, Shield } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import heroServices from "../../../public/hero-services.jpg";
 import heroNew from "../../../public/hero-new.jpg";
-import joinFleet from "../../../public/Join our fleet.jpg";
+
 import Link from "next/link";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import { services } from "@/data/services";
@@ -82,7 +82,7 @@ export default function ServicesPage() {
                             Need a custom solution?
                         </h2>
                         <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-                            Let's discuss how New Path Logistics can streamline your supply chain.
+                            Let&apos;s discuss how New Path Logistics can streamline your supply chain.
                         </p>
                         <Link
                             href="/contact"

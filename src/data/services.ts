@@ -1,6 +1,5 @@
-import { Truck, Package, Globe, Warehouse, MapPin, Shield, LucideIcon } from "lucide-react";
+import { Truck, Package, Globe, MapPin, LucideIcon } from "lucide-react";
 import { StaticImageData } from "next/image";
-import heroNew from "../../public/hero-new.jpg";
 import joinFleet from "../../public/Join our fleet.jpg";
 import nationwideCard from "../../public/NATIONWIDE TRUCKING-card.jpg";
 import logisticsCard from "../../public/LOGISTICS MANAGEMENT-card.jpg";

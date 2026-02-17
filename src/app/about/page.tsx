@@ -60,7 +60,7 @@ export default function About() {
                                 </div>
                                 <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4 text-zinc-900">Excellence</h3>
                                 <p className="text-zinc-600 leading-relaxed text-lg px-4">
-                                    Only the highest standard of work. We don't settle for "good enough."
+                                    Only the highest standard of work. We don&apos;t settle for &quot;good enough.&quot;
                                 </p>
                             </div>
                         </div>
