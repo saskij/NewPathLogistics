@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
-import heroBg from "../../public/hero-new.jpg";
+import heroBg from "../../public/hero-new.webp";
 
 // Dynamic imports for below-the-fold sections to reduce initial bundle size
 const Services = dynamic(() => import("@/components/sections/Services"));

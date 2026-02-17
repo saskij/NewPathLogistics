@@ -2,12 +2,18 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Phone, PhoneCall, Mail, Facebook, Linkedin, Instagram } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, PhoneCall } from 'lucide-react';
 import logoImg from '../../../public/logo.png';
 import { services } from '@/data/services';
+
+// Dynamic import for MobileMenu to reduce initial bundle size (TBT)
+const MobileMenu = dynamic(() => import('./MobileMenu'), {
+    ssr: false,
+    loading: () => null
+});
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -156,12 +162,10 @@ export default function Header() {
                                 </Link>
                             </li>
                         </ul>
-                        <motion.a
+                        <a
                             href="tel:5551234567"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.5, duration: 0.4 }}
-                            className="ml-8 border-[0.5px] border-zinc-700 text-zinc-300 px-5 py-2 flex items-center gap-3 rounded-sm hover:border-white hover:text-white hover:scale-105 transition-all duration-300 group bg-transparent"
+                            className="ml-8 border-[0.5px] border-zinc-700 text-zinc-300 px-5 py-2 flex items-center gap-3 rounded-sm hover:border-white hover:text-white hover:scale-105 transition-all duration-300 group bg-transparent animate-in fade-in slide-in-from-right-4 duration-500"
+                            style={{ animationDelay: '500ms', animationFillMode: 'both' }}
                         >
                             <PhoneCall className="w-4 h-4 text-red-600" />
                             <span className="font-bold tracking-widest text-xs uppercase">CALL US</span>
@@ -172,7 +176,7 @@ export default function Header() {
                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
                                 </span>
                             </div>
-                        </motion.a>
+                        </a>
                     </nav>
 
                     {/* Mobile Menu Toggle (Visible only when menu is closed) */}
@@ -186,120 +190,10 @@ export default function Header() {
                 </div>
             </header>
 
-            {/* Mobile Navigation Overlay - Premium Dark Theme */}
-            <AnimatePresence>
-                {isMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, x: '100%' }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: '100%' }}
-                        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 bg-zinc-950/90 backdrop-blur-xl z-[100] flex flex-col xl:hidden"
-                    >
-                        {/* Header Row: Logo & Close Button */}
-                        <div className="container mx-auto px-4 h-24 flex justify-between items-center shrink-0 border-b border-white/10">
-                            {/* Logo in Menu */}
-                            <div className="relative h-16 w-32" onClick={toggleMenu}>
-                                <Image
-                                    src={logoImg}
-                                    alt="New Path Logistics"
-                                    fill
-                                    sizes="128px"
-                                    placeholder="blur"
-                                    className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2]"
-                                />
-                            </div>
-
-                            <button
-                                className="h-12 w-12 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors text-white"
-                                onClick={toggleMenu}
-                                aria-label="Close menu"
-                            >
-                                <X size={28} />
-                            </button>
-                        </div>
-
-                        {/* Menu Items */}
-                        <nav className="flex-1 flex flex-col justify-center items-center py-8">
-                            <ul className="flex flex-col items-center space-y-8 text-3xl font-bold uppercase tracking-widest w-full">
-                                {/* Mobile Call Us Button - Top of list for visibility */}
-                                <motion.li
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.05 }}
-                                    className="w-full px-6 mb-4"
-                                >
-                                    <a
-                                        href="tel:5551234567"
-                                        onClick={toggleMenu}
-                                        className="flex items-center justify-center gap-3 w-full py-4 text-center border border-white/80 text-white font-bold uppercase tracking-wider rounded-lg hover:bg-white hover:text-black transition-all"
-                                    >
-                                        <Phone className="w-5 h-5" />
-                                        <span>Call Us</span>
-                                    </a>
-                                </motion.li>
-
-                                {['Home', 'Services', 'Equipment', 'Careers', 'About', 'Contact'].map((item, index) => {
-                                    const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`;
-                                    const isActive = pathname === path;
-                                    return (
-                                        <motion.li
-                                            key={item}
-                                            initial={{ opacity: 0, y: 20 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.1 + index * 0.1 }}
-                                        >
-                                            <Link
-                                                href={path}
-                                                onClick={toggleMenu}
-                                                className={`transition-colors ${isActive ? 'text-red-500' : 'text-white hover:text-red-500'}`}
-                                            >
-                                                {item === 'About' ? 'About Us' : item}
-                                            </Link>
-                                        </motion.li>
-                                    );
-                                })}
-                            </ul>
-
-                            {/* CTA Button */}
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.5 }}
-                                className="mt-12 w-full max-w-xs px-6"
-                            >
-                                <Link
-                                    href="/contact"
-                                    onClick={toggleMenu}
-                                    className="block w-full py-4 text-center bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider rounded-lg transition-colors shadow-lg shadow-red-900/20"
-                                >
-                                    Get a Quote
-                                </Link>
-                            </motion.div>
-                        </nav>
-
-                        {/* Footer: Contacts */}
-                        <div className="pb-8 px-6 text-center border-t border-white/10 pt-6">
-                            <div className="flex flex-col space-y-4 text-zinc-300 text-sm">
-                                <a href="tel:+15551234567" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
-                                    <Phone size={18} />
-                                    <span>+1 (555) 123-4567</span>
-                                </a>
-                                <a href="mailto:info@newpathlogistics.com" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
-                                    <Mail size={18} />
-                                    <span>info@newpathlogistics.com</span>
-                                </a>
-                            </div>
-
-                            <div className="flex justify-center space-x-6 mt-6 text-zinc-500">
-                                <a href="#" className="hover:text-white transition-colors"><Facebook size={24} /></a>
-                                <a href="#" className="hover:text-white transition-colors"><Linkedin size={24} /></a>
-                                <a href="#" className="hover:text-white transition-colors"><Instagram size={24} /></a>
-                            </div>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            {/* Dynamic Mobile Menu */}
+            {(isMenuOpen || typeof window === 'undefined') && (
+                <MobileMenu isOpen={isMenuOpen} onClose={toggleMenu} />
+            )}
         </>
     );
 }
