@@ -18,6 +18,7 @@ export default function Home() {
         subtitle="Reliable freight solutions and career opportunities for drivers who value respect and results."
         backgroundImage={heroBg}
         size="large"
+        sizes="(max-width: 768px) 100vw, 50vw"
       >
         <Link
           href="/careers"

@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   output: "export",
   images: {
     unoptimized: true,
+    formats: ['image/avif', 'image/webp'],
   },
   // Base path for GitHub Pages project site
   basePath: process.env.NODE_ENV === "production" ? "/NewPathLogistics" : "",

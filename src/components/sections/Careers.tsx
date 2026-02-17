@@ -36,7 +36,7 @@ export default function Careers() {
                             ))}
                         </ul>
 
-                        <p className="text-sm text-zinc-500 italic mb-8">
+                        <p className="text-sm text-zinc-400 italic mb-8">
                             * Specifics like home time and detention will be discussed during the interview to ensure they fit your needs.
                         </p>
 

@@ -25,7 +25,7 @@ export default function Footer() {
                             </Link>
 
                             <div className="space-y-6">
-                                <h3 className="text-sm text-zinc-500 font-bold uppercase tracking-widest mb-4">Contact Us</h3>
+                                <h3 className="text-sm text-zinc-400 font-bold uppercase tracking-widest mb-4">Contact Us</h3>
                                 <ul className="space-y-4">
                                     <li className="flex items-start gap-4 group">
                                         <Phone className="w-5 h-5 text-red-600 mt-1" />
@@ -91,12 +91,12 @@ export default function Footer() {
                                 <div className="absolute top-0 left-0 w-2 h-2 bg-red-600 rounded-full shadow-[0_0_8px_rgba(220,38,38,0.8)]"></div>
                             </div>
                         </div>
-                        <p className="text-xs text-zinc-500 mt-4 uppercase tracking-widest text-right w-full">Serving all 48 contiguous states</p>
+                        <p className="text-xs text-zinc-400 mt-4 uppercase tracking-widest text-right w-full">Serving all 48 contiguous states</p>
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-zinc-800 mt-16 pt-8 text-zinc-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="border-t border-zinc-800 mt-16 pt-8 text-zinc-400 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
                     <p>© {new Date().getFullYear()} New Path Logistics. All rights reserved.</p>
                     <div className="flex space-x-6">
                         <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

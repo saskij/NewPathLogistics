@@ -70,6 +70,7 @@ export default function Header() {
                                 fill
                                 className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2] drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                                 priority
+                                sizes="(max-width: 768px) 160px, 384px"
                             />
                         </div>
                     </Link>

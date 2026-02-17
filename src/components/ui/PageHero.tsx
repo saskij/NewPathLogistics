@@ -9,8 +9,8 @@ interface PageHeroProps {
     backgroundImage: StaticImageData | string;
     children?: ReactNode;
     size?: 'medium' | 'large';
-    overlayOpacity?: string;
-    className?: string;
+    imagePriority?: boolean;
+    sizes?: string;
 }
 
 export default function PageHero({
@@ -22,6 +22,8 @@ export default function PageHero({
     size = 'medium', // Default to medium (40vh) for internal pages
     overlayOpacity = 'bg-black/60',
     className = "",
+    imagePriority = true,
+    sizes = "(max-width: 768px) 100vw, 50vw",
 }: PageHeroProps) {
 
     const heightClass = size === 'large' ? 'min-h-[80vh] h-screen' : 'min-h-[40vh] py-20 md:py-32';
@@ -40,8 +42,8 @@ export default function PageHero({
                     alt={`${title} Background`}
                     fill
                     className="object-cover object-center"
-                    priority
-                    sizes="100vw"
+                    priority={imagePriority}
+                    sizes={sizes}
                 />
                 {/* Overlay */}
                 <div className={`absolute inset-0 ${overlayOpacity}`} />
@@ -65,9 +67,9 @@ export default function PageHero({
                         </p>
                     )}
 
-                    {/* Additional Content (Buttons, etc.) */}
+                    {/* Children (Buttons/CTA) */}
                     {children && (
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+                        <div className="flex flex-col md:flex-row gap-6 mt-8 animate-fade-in-up delay-300">
                             {children}
                         </div>
                     )}
