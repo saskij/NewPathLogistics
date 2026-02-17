@@ -1,50 +1,56 @@
 'use client';
 
-import { LazyMotion, domMax, m } from 'framer-motion';
 import { ReactNode, useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 
 interface ScrollAnimationProps {
     children: ReactNode;
     className?: string;
 }
 
+// Dynamically import framer-motion only when needed (reduces TBT significantly)
+const LazyMotionComponent = dynamic(
+    () => import('framer-motion').then(mod => {
+        const { LazyMotion, domMax, m } = mod;
+
+        // Return a wrapper component
+        return {
+            default: ({ children, className }: { children: ReactNode; className?: string }) => (
+                <LazyMotion features={domMax}>
+                    <m.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                        className={className}
+                    >
+                        {children}
+                    </m.div>
+                </LazyMotion>
+            )
+        };
+    }),
+    {
+        ssr: false, // Don't render on server
+        loading: () => <div className="opacity-0">{null}</div> // Invisible while loading
+    }
+);
+
 export default function ScrollAnimation({ children, className = '' }: ScrollAnimationProps) {
-    const [isDesktop, setIsDesktop] = useState(false);
+    const [shouldAnimate, setShouldAnimate] = useState(false);
 
     useEffect(() => {
-        // Check if window is defined (client-side) and if width is >= 768px (md breakpoint)
-        if (typeof window !== 'undefined') {
-            const checkDesktop = () => {
-                setIsDesktop(window.innerWidth >= 768);
-            };
-
-            // Initial check
-            checkDesktop();
-
-            // Add listener for resize
-            window.addEventListener('resize', checkDesktop);
-            return () => window.removeEventListener('resize', checkDesktop);
+        // Only load animations on desktop (>= 1024px for true desktop)
+        if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+            setShouldAnimate(true);
         }
     }, []);
 
-    // If not desktop, return a static div with the same class
-    // This optimization prevents loading animation libraries on mobile
-    if (!isDesktop) {
+    // On mobile/tablet, return static div (no animation library loaded)
+    if (!shouldAnimate) {
         return <div className={className}>{children}</div>;
     }
 
-    // If desktop, use LazyMotion to load animation features on demand
-    return (
-        <LazyMotion features={domMax}>
-            <m.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-                className={className}
-            >
-                {children}
-            </m.div>
-        </LazyMotion>
-    );
+    // On desktop, use dynamic import (loads framer-motion only when needed)
+    return <LazyMotionComponent className={className}>{children}</LazyMotionComponent>;
 }

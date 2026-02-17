@@ -36,3 +36,23 @@ body {
   overflow-x: hidden;
   /* Prevent horizontal scroll */
 }
+
+/* Desktop Accessibility: Focus Indicators (for keyboard navigation) */
+@media (min-width: 1024px) {
+  /* Visible focus indicators for all interactive elements on desktop */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid #dc2626; /* Red-600 for brand consistency */
+    outline-offset: 2px;
+  }
+
+  /* Enhanced focus for links */
+  a:focus-visible {
+    outline-width: 3px;
+    outline-offset: 3px;
+  }
+}
