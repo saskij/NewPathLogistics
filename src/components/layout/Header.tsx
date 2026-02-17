@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, Phone, PhoneCall, Mail, Facebook, Linkedin, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../../../public/logo.png';
+import { services } from '@/data/services';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,13 +85,28 @@ export default function Header() {
                                     Home
                                 </Link>
                             </li>
-                            <li>
+                            <li className="relative group">
                                 <Link
                                     href="/services"
-                                    className={`transition-colors ${pathname === '/services' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                    className={`transition-colors py-8 inline-block ${pathname.startsWith('/services') ? 'text-white border-b-2 border-red-600' : 'text-gray-400 hover:text-white'}`}
                                 >
                                     Services
                                 </Link>
+                                {/* Dropdown Menu */}
+                                <div className="absolute left-0 top-full w-64 bg-[#121212]/95 backdrop-blur-md border border-white/10 rounded-b-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                                    <ul className="py-2">
+                                        {services.map((service) => (
+                                            <li key={service.id}>
+                                                <Link
+                                                    href={`/services/${service.id}`}
+                                                    className="block px-6 py-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-colors uppercase tracking-wider"
+                                                >
+                                                    {service.title}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <Link

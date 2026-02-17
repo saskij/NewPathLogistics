@@ -16,7 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-anthracite text-white flex flex-col">
       <PageHero
         title="Success Driven By Performance, Not Labels."
-        bottomCaption="DOT 4499738 | MC 1779954"
+        bottomCaption="USDOT 4499738 | MC 1779954"
         subtitle="Reliable freight solutions and career opportunities for drivers who value respect and results."
         backgroundImage={heroBg}
         size="large"
