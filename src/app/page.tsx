@@ -1,13 +1,16 @@
 import Link from "next/link";
-import Services from "@/components/sections/Services";
-import Careers from "@/components/sections/Careers";
-import AboutContact from "@/components/sections/AboutContact";
-import WhyDrive from "@/components/sections/WhyDrive";
-import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import ScrollAnimation from "@/components/ui/ScrollAnimation";
+import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
+import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import heroBg from "../../public/hero-new.jpg";
+
+// Dynamic imports for below-the-fold sections to reduce initial bundle size
+const Services = dynamic(() => import("@/components/sections/Services"));
+const Careers = dynamic(() => import("@/components/sections/Careers"));
+const AboutContact = dynamic(() => import("@/components/sections/AboutContact"));
+const WhyDrive = dynamic(() => import("@/components/sections/WhyDrive"));
+const WhyChooseUs = dynamic(() => import("@/components/sections/WhyChooseUs"));
 
 export default function Home() {
   return (
