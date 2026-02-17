@@ -1,4 +1,4 @@
-'use client';
+'use client'; // Re-triggering build
 
 import Link from 'next/link';
 import Image from 'next/image';
