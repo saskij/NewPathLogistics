@@ -80,17 +80,21 @@ export default function Header() {
                             <li className="h-full flex items-center">
                                 <Link
                                     href="/"
-                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
+                                    className={`relative h-full flex items-center px-1 group/link transition-colors duration-300 ${pathname === '/' ? 'text-white' : 'text-gray-400 hover:text-white'}`}
                                 >
-                                    Home
+                                    <span className={`border-b-2 pb-0.5 transition-all duration-300 ${pathname === '/' ? 'border-red-600' : 'border-transparent group-hover/link:border-red-600/50'}`}>
+                                        Home
+                                    </span>
                                 </Link>
                             </li>
                             <li className="relative group h-full flex items-center">
                                 <Link
                                     href="/services"
-                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname.startsWith('/services') ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
+                                    className={`relative h-full flex items-center px-1 group/link transition-colors duration-300 ${pathname.startsWith('/services') ? 'text-white' : 'text-gray-400 hover:text-white'}`}
                                 >
-                                    Services
+                                    <span className={`border-b-2 pb-0.5 transition-all duration-300 ${pathname.startsWith('/services') ? 'border-red-600' : 'border-transparent group-hover/link:border-red-600/50'}`}>
+                                        Services
+                                    </span>
                                 </Link>
                                 {/* Dropdown Menu */}
                                 <div className="absolute left-0 top-full w-64 bg-[#121212] border border-white/10 rounded-b-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
@@ -111,33 +115,41 @@ export default function Header() {
                             <li className="h-full flex items-center">
                                 <Link
                                     href="/equipment"
-                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/equipment' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
+                                    className={`relative h-full flex items-center px-1 group/link transition-colors duration-300 ${pathname === '/equipment' ? 'text-white' : 'text-gray-400 hover:text-white'}`}
                                 >
-                                    Equipment
+                                    <span className={`border-b-2 pb-0.5 transition-all duration-300 ${pathname === '/equipment' ? 'border-red-600' : 'border-transparent group-hover/link:border-red-600/50'}`}>
+                                        Equipment
+                                    </span>
                                 </Link>
                             </li>
                             <li className="h-full flex items-center">
                                 <Link
                                     href="/careers"
-                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/careers' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
+                                    className={`relative h-full flex items-center px-1 group/link transition-colors duration-300 ${pathname === '/careers' ? 'text-white' : 'text-gray-400 hover:text-white'}`}
                                 >
-                                    Careers
+                                    <span className={`border-b-2 pb-0.5 transition-all duration-300 ${pathname === '/careers' ? 'border-red-600' : 'border-transparent group-hover/link:border-red-600/50'}`}>
+                                        Careers
+                                    </span>
                                 </Link>
                             </li>
                             <li className="h-full flex items-center">
                                 <Link
                                     href="/about"
-                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/about' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
+                                    className={`relative h-full flex items-center px-1 group/link transition-colors duration-300 ${pathname === '/about' ? 'text-white' : 'text-gray-400 hover:text-white'}`}
                                 >
-                                    About Us
+                                    <span className={`border-b-2 pb-0.5 transition-all duration-300 ${pathname === '/about' ? 'border-red-600' : 'border-transparent group-hover/link:border-red-600/50'}`}>
+                                        About Us
+                                    </span>
                                 </Link>
                             </li>
                             <li className="h-full flex items-center">
                                 <Link
                                     href="/contact"
-                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/contact' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
+                                    className={`relative h-full flex items-center px-1 group/link transition-colors duration-300 ${pathname === '/contact' ? 'text-white' : 'text-gray-400 hover:text-white'}`}
                                 >
-                                    Contact
+                                    <span className={`border-b-2 pb-0.5 transition-all duration-300 ${pathname === '/contact' ? 'border-red-600' : 'border-transparent group-hover/link:border-red-600/50'}`}>
+                                        Contact
+                                    </span>
                                 </Link>
                             </li>
                         </ul>
