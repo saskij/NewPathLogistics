@@ -11,6 +11,8 @@ interface PageHeroProps {
     size?: 'medium' | 'large';
     imagePriority?: boolean;
     sizes?: string;
+    overlayOpacity?: string;
+    className?: string;
 }
 
 export default function PageHero({
