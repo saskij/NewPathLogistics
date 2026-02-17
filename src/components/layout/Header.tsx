@@ -76,24 +76,24 @@ export default function Header() {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden xl:flex h-20 items-center ml-12">
-                        <ul className="flex space-x-6 lg:space-x-10 text-sm font-bold uppercase tracking-wide whitespace-nowrap">
-                            <li>
+                        <ul className="flex space-x-8 text-sm font-bold uppercase tracking-wide whitespace-nowrap h-full">
+                            <li className="h-full flex items-center">
                                 <Link
                                     href="/"
-                                    className={`transition-colors ${pathname === '/' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
                                 >
                                     Home
                                 </Link>
                             </li>
-                            <li className="relative group">
+                            <li className="relative group h-full flex items-center">
                                 <Link
                                     href="/services"
-                                    className={`transition-colors py-8 inline-block ${pathname.startsWith('/services') ? 'text-white border-b-2 border-red-600' : 'text-gray-400 hover:text-white'}`}
+                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname.startsWith('/services') ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
                                 >
                                     Services
                                 </Link>
                                 {/* Dropdown Menu */}
-                                <div className="absolute left-0 top-full w-64 bg-[#121212]/95 backdrop-blur-md border border-white/10 rounded-b-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                                <div className="absolute left-0 top-full w-64 bg-[#121212] border border-white/10 rounded-b-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
                                     <ul className="py-2">
                                         {services.map((service) => (
                                             <li key={service.id}>
@@ -108,34 +108,34 @@ export default function Header() {
                                     </ul>
                                 </div>
                             </li>
-                            <li>
+                            <li className="h-full flex items-center">
                                 <Link
                                     href="/equipment"
-                                    className={`transition-colors ${pathname === '/equipment' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/equipment' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
                                 >
                                     Equipment
                                 </Link>
                             </li>
-                            <li>
+                            <li className="h-full flex items-center">
                                 <Link
                                     href="/careers"
-                                    className={`transition-colors ${pathname === '/careers' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/careers' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
                                 >
                                     Careers
                                 </Link>
                             </li>
-                            <li>
+                            <li className="h-full flex items-center">
                                 <Link
                                     href="/about"
-                                    className={`transition-colors ${pathname === '/about' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/about' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
                                 >
                                     About Us
                                 </Link>
                             </li>
-                            <li>
+                            <li className="h-full flex items-center">
                                 <Link
                                     href="/contact"
-                                    className={`transition-colors ${pathname === '/contact' ? 'text-white border-b-2 border-red-600 pb-1' : 'text-gray-400 hover:text-white'}`}
+                                    className={`relative h-full flex items-center border-b-2 transition-all duration-300 ${pathname === '/contact' ? 'text-white border-red-600' : 'text-gray-400 border-transparent hover:text-white hover:border-red-600/50'}`}
                                 >
                                     Contact
                                 </Link>
