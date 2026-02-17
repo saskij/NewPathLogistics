@@ -84,7 +84,7 @@ export default function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden xl:flex h-20 items-center ml-12">
+                    <nav className="hidden xl:flex h-full items-center ml-12">
                         <ul className="flex space-x-8 text-sm font-bold uppercase tracking-wide whitespace-nowrap h-full">
                             <li className="h-full flex items-center">
                                 <Link
