@@ -21,7 +21,7 @@ export default function Careers() {
                         <h2 className="text-4xl lg:text-5xl font-bold text-white mb-2 uppercase tracking-tight">Join Our Fleet</h2>
                         <div className="w-20 h-1.5 bg-white mb-8"></div>
 
-                        <p className="text-xl text-zinc-400 mb-10 font-medium">
+                        <p className="text-xl text-zinc-300 mb-10 font-medium">
                             Drive for a company that values your skill and commitment. We offer competitive pay, stability, and respect.
                         </p>
 
@@ -36,7 +36,7 @@ export default function Careers() {
                             ))}
                         </ul>
 
-                        <p className="text-sm text-zinc-400 italic mb-8">
+                        <p className="text-sm text-zinc-300 italic mb-8">
                             * Specifics like home time and detention will be discussed during the interview to ensure they fit your needs.
                         </p>
 
@@ -58,6 +58,7 @@ export default function Careers() {
                         fill
                         className="object-cover brightness-[0.75] contrast-[1.2]"
                         sizes="(max-width: 1024px) 100vw, 50vw"
+                        placeholder="blur"
                     />
                     <div className="absolute inset-0 bg-black/20 mix-blend-multiply transition-opacity hover:opacity-0 duration-500"></div>
                 </div>

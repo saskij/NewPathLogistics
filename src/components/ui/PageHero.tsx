@@ -46,6 +46,7 @@ export default function PageHero({
                     className="object-cover object-center"
                     priority={imagePriority}
                     sizes={sizes}
+                    placeholder="blur"
                 />
                 {/* Overlay */}
                 <div className={`absolute inset-0 ${overlayOpacity}`} />

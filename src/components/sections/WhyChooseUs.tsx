@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
                             <Gauge size={36} strokeWidth={2} />
                         </div>
                         <h3 className="text-2xl font-bold text-white uppercase tracking-tighter mb-4">Merit & Performance</h3>
-                        <p className="text-zinc-400 leading-relaxed min-h-[4rem]">
+                        <p className="text-zinc-300 leading-relaxed min-h-[4rem]">
                             We value results, not labels. Your success is defined by your skill and dedication, not your background.
                         </p>
                     </div>
@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
                             <Shield size={36} strokeWidth={2} />
                         </div>
                         <h3 className="text-2xl font-bold text-white uppercase tracking-tighter mb-4">Second Chances</h3>
-                        <p className="text-zinc-400 leading-relaxed min-h-[4rem]">
+                        <p className="text-zinc-300 leading-relaxed min-h-[4rem]">
                             We believe in people. We provide genuine earning opportunities and a fresh start for those ready to work hard.
                         </p>
                     </div>
@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
                             <Truck size={36} strokeWidth={2} />
                         </div>
                         <h3 className="text-2xl font-bold text-white uppercase tracking-tighter mb-4">Professionalism</h3>
-                        <p className="text-zinc-400 leading-relaxed min-h-[4rem]">
+                        <p className="text-zinc-300 leading-relaxed min-h-[4rem]">
                             A culture of accountability, integrity, and operational excellence. We deliver on our promises, every mile.
                         </p>
                     </div>

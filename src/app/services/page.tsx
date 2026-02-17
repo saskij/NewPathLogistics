@@ -53,6 +53,7 @@ export default function ServicesPage() {
                                         <Link
                                             href={`/services/${service.id}`}
                                             className="inline-flex items-center gap-2 text-red-600 font-bold uppercase tracking-wider hover:text-red-700 transition-colors group"
+                                            aria-label={`Learn more about ${service.title}`}
                                         >
                                             Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </Link>
@@ -64,6 +65,8 @@ export default function ServicesPage() {
                                             src={ServiceImage}
                                             alt={service.title}
                                             fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            placeholder="blur"
                                             className="object-cover hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>

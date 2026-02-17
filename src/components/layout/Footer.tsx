@@ -25,7 +25,7 @@ export default function Footer() {
                             </Link>
 
                             <div className="space-y-6">
-                                <h3 className="text-sm text-zinc-400 font-bold uppercase tracking-widest mb-4">Contact Us</h3>
+                                <h3 className="text-sm text-zinc-300 font-bold uppercase tracking-widest mb-4">Contact Us</h3>
                                 <ul className="space-y-4">
                                     <li className="flex items-start gap-4 group">
                                         <Phone className="w-5 h-5 text-red-600 mt-1" />
@@ -45,7 +45,7 @@ export default function Footer() {
                                     </li>
                                     <li className="flex items-start">
                                         <MapPin className="w-5 h-5 text-red-500 mt-1 mr-3 flex-shrink-0" />
-                                        <span className="text-zinc-400">
+                                        <span className="text-zinc-300">
                                             Based in <span className="text-white font-bold">Meridian, Idaho</span><br />
                                             Operating Nationwide
                                         </span>
@@ -60,7 +60,7 @@ export default function Footer() {
                         <div className="w-full max-w-xs h-full flex flex-col">
                             <h3 className="text-lg font-bold uppercase tracking-widest mb-8 text-white border-l-4 border-red-600 pl-4">Quick Links</h3>
                             <nav className="flex-grow">
-                                <ul className="flex flex-col justify-between h-full min-h-[200px] text-sm font-medium tracking-wide text-zinc-400">
+                                <ul className="flex flex-col justify-between h-full min-h-[200px] text-sm font-medium tracking-wide text-zinc-300">
                                     <li><Link href="/" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Home</Link></li>
                                     <li><Link href="/services" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Services</Link></li>
                                     <li><Link href="/equipment" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Equipment</Link></li>
@@ -91,12 +91,12 @@ export default function Footer() {
                                 <div className="absolute top-0 left-0 w-2 h-2 bg-red-600 rounded-full shadow-[0_0_8px_rgba(220,38,38,0.8)]"></div>
                             </div>
                         </div>
-                        <p className="text-xs text-zinc-400 mt-4 uppercase tracking-widest text-right w-full">Serving all 48 contiguous states</p>
+                        <p className="text-xs text-zinc-300 mt-4 uppercase tracking-widest text-right w-full">Serving all 48 contiguous states</p>
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-zinc-800 mt-16 pt-8 text-zinc-400 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="border-t border-zinc-800 mt-16 pt-8 text-zinc-300 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
                     <p>© {new Date().getFullYear()} New Path Logistics. All rights reserved.</p>
                     <div className="flex space-x-6">
                         <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
@@ -105,13 +105,13 @@ export default function Footer() {
 
                     {/* Social Media */}
                     <div className="flex gap-4 mt-4 md:mt-0">
-                        <a href="#" className="p-2 text-zinc-400 hover:text-white transition-all duration-300 hover:scale-110">
+                        <a href="#" className="p-3 text-zinc-300 hover:text-white transition-all duration-300 hover:scale-110">
                             <Facebook className="w-5 h-5" />
                         </a>
-                        <a href="#" className="p-2 text-zinc-400 hover:text-white transition-all duration-300 hover:scale-110">
+                        <a href="#" className="p-3 text-zinc-300 hover:text-white transition-all duration-300 hover:scale-110">
                             <Linkedin className="w-5 h-5" />
                         </a>
-                        <a href="#" className="p-2 text-zinc-400 hover:text-white transition-all duration-300 hover:scale-110">
+                        <a href="#" className="p-3 text-zinc-300 hover:text-white transition-all duration-300 hover:scale-110">
                             <Instagram className="w-5 h-5" />
                         </a>
                     </div>

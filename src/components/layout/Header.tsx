@@ -67,10 +67,12 @@ export default function Header() {
                             <Image
                                 src={logoImg}
                                 alt="New Path Logistics Logo"
-                                fill
-                                className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2] drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+                                width={150}
+                                height={140}
+                                className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2] drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] w-full h-full"
                                 priority
-                                sizes="(max-width: 768px) 160px, 384px"
+                                sizes="(max-width: 768px) 160px, (max-width: 1200px) 256px, 384px"
+                                placeholder="blur"
                             />
                         </div>
                     </Link>
@@ -202,6 +204,8 @@ export default function Header() {
                                     src={logoImg}
                                     alt="New Path Logistics"
                                     fill
+                                    sizes="128px"
+                                    placeholder="blur"
                                     className="object-contain object-left grayscale brightness-[1.8] contrast-[1.2]"
                                 />
                             </div>
@@ -276,7 +280,7 @@ export default function Header() {
 
                         {/* Footer: Contacts */}
                         <div className="pb-8 px-6 text-center border-t border-white/10 pt-6">
-                            <div className="flex flex-col space-y-4 text-zinc-400 text-sm">
+                            <div className="flex flex-col space-y-4 text-zinc-300 text-sm">
                                 <a href="tel:+15551234567" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
                                     <Phone size={18} />
                                     <span>+1 (555) 123-4567</span>
