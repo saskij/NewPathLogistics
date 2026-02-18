@@ -99,8 +99,8 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-zinc-500">Email</h3>
-                                        <a href="mailto:info@newpathlogistics.com" className="text-2xl font-bold text-zinc-900 hover:text-zinc-600 transition-colors">
-                                            info@newpathlogistics.com
+                                        <a href="mailto:newlogisticsllc@gmail.com" className="text-2xl font-bold text-zinc-900 hover:text-zinc-600 transition-colors">
+                                            newlogisticsllc@gmail.com
                                         </a>
                                         <p className="text-sm text-zinc-500 mt-1">We typically reply within 24 hours.</p>
                                     </div>

@@ -76,8 +76,8 @@ export default function PrivacyPage() {
                             <p className="font-bold text-zinc-900 uppercase tracking-wider mb-2">New Path Logistics</p>
                             <p className="text-zinc-600">123 Logistics Way</p>
                             <p className="text-zinc-600 mb-4">Denver, CO 80202</p>
-                            <a href="mailto:info@newpathlogistics.com" className="text-red-600 hover:text-red-700 font-bold transition-colors">
-                                info@newpathlogistics.com
+                            <a href="mailto:newlogisticsllc@gmail.com" className="text-red-600 hover:text-red-700 font-bold transition-colors">
+                                newlogisticsllc@gmail.com
                             </a>
                         </div>
                     </div>

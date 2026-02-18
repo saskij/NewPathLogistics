@@ -125,9 +125,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                 <Phone size={18} />
                                 <span>+1 (208) 992-7153</span>
                             </a>
-                            <a href="mailto:info@newpathlogistics.com" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
+                            <a href="mailto:newlogisticsllc@gmail.com" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
                                 <Mail size={18} />
-                                <span>info@newpathlogistics.com</span>
+                                <span>newlogisticsllc@gmail.com</span>
                             </a>
                         </div>
 

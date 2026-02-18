@@ -51,7 +51,7 @@ export default function Footer() {
                                         <Mail className="w-5 h-5 text-red-600 mt-1" />
                                         <div>
                                             <p className="text-base font-bold hover:text-red-500 transition-colors">
-                                                <a href="mailto:info@newpathlogistics.com">info@newpathlogistics.com</a>
+                                                <a href="mailto:newlogisticsllc@gmail.com">newlogisticsllc@gmail.com</a>
                                             </p>
                                         </div>
                                     </li>
