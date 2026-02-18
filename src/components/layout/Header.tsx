@@ -89,6 +89,7 @@ export default function Header() {
                                 <Link
                                     href="/"
                                     className={`relative h-full flex items-center px-1 group/link transition-colors duration-300 ${pathname === '/' ? 'text-white' : 'text-gray-400 hover:text-white'}`}
+                                    onClick={handleLogoClick}
                                 >
                                     <span className={`border-b-2 pb-0.5 transition-all duration-300 ${pathname === '/' ? 'border-red-600' : 'border-transparent group-hover/link:border-red-600/50'}`}>
                                         Home

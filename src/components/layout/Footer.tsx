@@ -1,10 +1,22 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
 import logoImg from '../../../public/logo.png';
 import mapImg from '../../../public/map.png';
 
 export default function Footer() {
+    const pathname = usePathname();
+
+    const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (pathname === '/') {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
+
     return (
         <footer id="footer" className="bg-black text-white pt-20 pb-8 border-t border-zinc-900">
             <div className="container mx-auto px-4">
@@ -61,7 +73,7 @@ export default function Footer() {
                             <h3 className="text-lg font-bold uppercase tracking-widest mb-8 text-white border-l-4 border-red-600 pl-4">Quick Links</h3>
                             <nav className="flex-grow">
                                 <ul className="flex flex-col justify-between h-full min-h-[200px] text-sm font-medium tracking-wide text-zinc-300">
-                                    <li><Link href="/" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Home</Link></li>
+                                    <li><Link href="/" onClick={handleHomeClick} className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Home</Link></li>
                                     <li><Link href="/services" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Services</Link></li>
                                     <li><Link href="/equipment" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Equipment</Link></li>
                                     <li><Link href="/careers" className="hover:text-white hover:pl-2 transition-all duration-300 block border-b border-zinc-900 pb-2">Careers</Link></li>

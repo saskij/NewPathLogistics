@@ -16,6 +16,16 @@ interface MobileMenuProps {
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     const pathname = usePathname();
 
+    const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (pathname === '/') {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            onClose();
+        } else {
+            onClose();
+        }
+    };
+
     return (
         <AnimatePresence>
             {isOpen && (
@@ -81,7 +91,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                     >
                                         <Link
                                             href={path}
-                                            onClick={onClose}
+                                            onClick={item === 'Home' ? handleHomeClick : onClose}
                                             className={`transition-colors ${isActive ? 'text-red-500' : 'text-white hover:text-red-500'}`}
                                         >
                                             {item === 'About' ? 'About Us' : item}
