@@ -85,8 +85,8 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-zinc-500">Phone</h3>
-                                        <a href="tel:5551234567" className="text-2xl font-bold text-zinc-900 hover:text-zinc-600 transition-colors">
-                                            (555) 123-4567
+                                        <a href="tel:2089927153" className="text-2xl font-bold text-zinc-900 hover:text-zinc-600 transition-colors">
+                                            (208) 992-7153
                                         </a>
                                         <p className="text-sm text-zinc-500 mt-1">Mon-Fri, 8am - 6pm MST</p>
                                     </div>
@@ -157,7 +157,7 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                                             type="tel"
                                             id="phone"
                                             className="w-full bg-zinc-50 border border-zinc-200 px-4 py-4 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors rounded-lg"
-                                            placeholder="(555) 123-4567"
+                                            placeholder="(208) 992-7153"
                                         />
                                     </div>
                                 </div>

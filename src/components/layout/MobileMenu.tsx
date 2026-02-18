@@ -60,7 +60,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                 className="w-full px-6 mb-4"
                             >
                                 <a
-                                    href="tel:5551234567"
+                                    href="tel:2089927153"
                                     onClick={onClose}
                                     className="flex items-center justify-center gap-3 w-full py-4 text-center border border-white/80 text-white font-bold uppercase tracking-wider rounded-lg hover:bg-white hover:text-black transition-all"
                                 >
@@ -111,9 +111,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     {/* Footer: Contacts */}
                     <div className="pb-8 px-6 text-center border-t border-white/10 pt-6">
                         <div className="flex flex-col space-y-4 text-zinc-300 text-sm">
-                            <a href="tel:+15551234567" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
+                            <a href="tel:2089927153" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
                                 <Phone size={18} />
-                                <span>+1 (555) 123-4567</span>
+                                <span>+1 (208) 992-7153</span>
                             </a>
                             <a href="mailto:info@newpathlogistics.com" className="flex items-center justify-center space-x-2 hover:text-white transition-colors">
                                 <Mail size={18} />
