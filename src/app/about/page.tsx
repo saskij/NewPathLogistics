@@ -74,9 +74,9 @@ export default function About() {
                     <ScrollAnimation>
                         <div className="inline-flex items-center justify-center p-4 bg-white rounded-full shadow-sm border border-zinc-200 mb-8">
                             <MapPin className="w-8 h-8 text-red-600 mr-3" />
-                            <span className="text-xl font-bold uppercase tracking-widest text-zinc-900">Meridian, Idaho</span>
+                            <span className="text-xl font-bold uppercase tracking-widest text-zinc-900">Caldwell ID</span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-6 text-zinc-900">Proudly Based in Meridian</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-6 text-zinc-900">Proudly Based in Caldwell ID</h2>
                         <p className="text-xl text-zinc-600 max-w-2xl mx-auto leading-relaxed">
                             Bringing the honesty, hard work, and resilience of our region to the highways of America.
                         </p>

@@ -45,7 +45,7 @@ export default function AboutContact() {
 
                             <div className="pt-8 mt-4 border-t border-zinc-200">
                                 <p className="text-sm font-bold uppercase tracking-widest text-zinc-500">Headquarters</p>
-                                <p className="text-xl text-zinc-900 font-bold mt-2">Proudly based in <span className="text-red-600">Meridian, Idaho</span>.</p>
+                                <p className="text-xl text-zinc-900 font-bold mt-2">Proudly based in <span className="text-red-600">Caldwell ID</span>.</p>
                             </div>
                         </div>
                     </div>

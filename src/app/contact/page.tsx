@@ -114,8 +114,7 @@ c10.6-5.1,17.3-15.9,17.3-27.7c0-2.4-0.3-4.7-0.8-7.1c-2.6-10.9,2.9-22,13.2-26.2C9
                                     <div>
                                         <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-zinc-500">Headquarters</h3>
                                         <address className="text-2xl font-bold text-zinc-900 not-italic leading-tight">
-                                            123 Logistics Way<br />
-                                            Denver, CO 80202
+                                            Caldwell ID
                                         </address>
                                     </div>
                                 </div>

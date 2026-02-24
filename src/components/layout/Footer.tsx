@@ -58,7 +58,7 @@ export default function Footer() {
                                     <li className="flex items-start">
                                         <MapPin className="w-5 h-5 text-red-500 mt-1 mr-3 flex-shrink-0" />
                                         <span className="text-zinc-300">
-                                            Based in <span className="text-white font-bold">Meridian, Idaho</span><br />
+                                            Based in <span className="text-white font-bold">Caldwell ID</span><br />
                                             Operating Nationwide
                                         </span>
                                     </li>

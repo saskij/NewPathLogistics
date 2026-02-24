@@ -171,7 +171,7 @@ export default function EquipmentPage() {
                     <ScrollAnimation>
                         {/* Local Context */}
                         <p className="text-zinc-500 text-sm font-mono uppercase tracking-widest mb-10">
-                            Our fleet is serviced and maintained at our main hub in <span className="text-red-500 font-bold">Meridian, Idaho</span>.
+                            Our fleet is serviced and maintained at our main hub in <span className="text-red-500 font-bold">Caldwell ID</span>.
                         </p>
 
                         <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-8">
